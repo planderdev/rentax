@@ -1,0 +1,138 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대 건물 관리</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <div class="building_manage_wrap">
+                <!---임대계약1-->
+                <div class="building_manage">
+                    <div class="list_style_c mb-4">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업종류</div>
+                                <div class="sub">주택임대사업</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub">129-58-54841</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">지자체 등록번호</div>
+                                <div class="sub">2020-서귀포시-임대사업자-015</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---임대계약서 리스트-->
+                    <div class="d-flex gap-3 flex-column pb-4">
+                        <div class="building_item" onclick="location.href='building_info.html'">
+                            <div class="subtitle2 mb-1">팽이하우스</div>
+                            <div class="body2 cl_description"><span>101호</span></div>
+                        </div>
+                        <div class="building_item" onclick="location.href='building_info.html'">
+                            <div class="subtitle2 mb-1">팽이하우스</div>
+                            <div class="body2 cl_description"><span>101호</span></div>
+                        </div>
+                    </div>
+                    <!---임대계약서 리스트-->
+                    <button type="button" class="btn btn-dark btn-icon-right w-100 btn-lg"
+                        onclick="location.href='contract2.html'">임대계약서 추가<span
+                            class="material-symbols-outlined">add</span></button>
+                </div>
+
+                <!---임대계약2-->
+                <div class="building_manage">
+                    <div class="list_style_c mb-4">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업종류</div>
+                                <div class="sub">주택임대사업</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub">129-58-54841</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---임대계약서 리스트-->
+                    <div class="d-flex gap-3 flex-column pb-4">
+                        <div class="building_item" onclick="location.href='building_info.html'">
+                            <div class="subtitle2 mb-1">역삼래미안그레이튼1단지</div>
+                            <div class="body2 cl_description"><span>103동</span><span>101호</span></div>
+                        </div>
+                    </div>
+                    <!---임대계약서 리스트-->
+                    <button type="button" class="btn btn-dark btn-icon-right w-100 btn-lg"
+                        onclick="location.href='contract2.html'">임대계약서 추가<span
+                            class="material-symbols-outlined">add</span></button>
+                </div>
+            </div>
+
+
+            <div class="fixed_bottom d-flex  ">
+                <button type="button" class="btn btn-full  w-100  btn-primary"
+                    onclick="location.href='add_regist.html'">사업자번호 추가 등록</button>
+            </div>
+        </div>
+        <!--content e-->
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
+
+
+
+</body>
+
+</html>

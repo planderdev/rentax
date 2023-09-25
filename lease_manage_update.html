@@ -1,0 +1,100 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대 계약 갱신</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <div class="px-3 pt-3">
+                <div class="pb-5">
+                    <div class="subtitle2  pb-2">
+                        계약 갱신 임대계약서를 작성한 경우
+                    </div>
+                    <button type="button" class="btn btn-with-arrow btn-lg btn-outline-primary" onclick="location.href='lease_manage.html#photo-tab'" data-toggle="tab">
+                        <span class="material-symbols-outlined">update</span>계약서 등록</button>
+                </div>
+                <div class="pb-5">
+                    <div class="subtitle2 pb-3">
+                        인상 가능한 임대료 계산
+                    </div>
+                    <button type="button" class="btn btn-with-arrow btn-lg  btn-outline-primary"
+                        onclick="location.href='lease_manage_caculate.html'">
+                        <span class="material-symbols-outlined">calculate</span>임대료 계산</button>
+
+                </div>
+                <div class="pb-5">
+                    <div class="subtitle2 pb-3">
+                        묵시적 갱신이 된 경우
+                    </div>
+                    <button type="button" class="btn btn-with-arrow btn-lg  btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#updatemodal">
+                        <span class="material-symbols-outlined">new_label</span>묵시적 갱신</button>
+
+                </div>
+            </div>
+        </div>
+        <!--content e-->
+         
+        <!-- updatemodal s-->
+        <div class="modal fade" id="updatemodal" tabindex="-1" aria-labelledby="updatemodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="updatemodalLabel">묵시적 계약 갱신</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3">
+                        종료된 계약과 동일한 조건으로 새로운 계약이 등록되었습니다. 메모에 묵시적 계약 갱신 내용을 기록해 두면 임대 관리가 쉬워집니다.
+                    </div>
+                    <div class="modal-footer">
+                        <!--button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button-->
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- updatemodal e-->
+
+       
+        <?
+        include("include/footer.php");
+        ?> 
+
+
+</body>
+
+</html>

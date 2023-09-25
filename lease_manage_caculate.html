@@ -1,0 +1,167 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대료 인상률 계산</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!-- 임대정보 s-->
+            <div class="px-3 py-3 mb-2">
+                <div class="btn-group leaseinfo_select">
+                    <button class="btn btn-white btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span>역삼 래미안 그래이튼 1단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                            class="line"></span><span>이몽룡</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><span>역삼 래미안 그래이튼 1단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 2단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 3단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 4단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- 임대정보 e-->
+            <hr>
+
+            <!--info s-->
+            <div class="lease_info_list_wrap">
+
+                <div class="lease_info_list">
+                    <div class="subtitle3">현재 임대계약 내용</div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            현재 보증금
+                        </div>
+                        <div class="flex-1">
+                            <div class="input-group">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="number" class="form-control pe-5" placeholder="" aria-label="현재 보증금"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            현재 임대료
+                        </div>
+                        <div class="flex-1">
+                            <div class="input-group">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="number" class="form-control pe-5" placeholder="" aria-label="현재 임대료"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lease_info_list pt-4">
+                    <div class="subtitle3">희망 보증금으로 임대료 계산</div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            희망 보증금
+                        </div>
+                        <div class="flex-1">
+                            <div class="input-group">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="number" class="form-control pe-5" placeholder="" aria-label="희망 보증금"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            상한 임대료
+                        </div>
+                        <div class="flex-1">
+                            <div class="input-group">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="number" class="form-control pe-5" placeholder="" aria-label="상한 임대료"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-dark btn-md">계산하기</button>
+                </div>
+
+                <div class="lease_info_list pt-4">
+                    <div class="subtitle3">희망 임대료로 보증금 계산</div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            상한 보증금
+                        </div>
+                        <div class="flex-1">
+                            <div class="input-group">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="number" class="form-control pe-5" placeholder="" aria-label="상한 보증금"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            희망 임대료
+                        </div>
+                        <div class="flex-1">
+                            <div class="input-group">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="number" class="form-control pe-5" placeholder="" aria-label="희망 임대료"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-dark btn-md">계산하기</button>
+                </div>
+
+
+
+            </div>
+            <!--info e-->
+
+        </div>
+        <!--content e-->
+        <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>

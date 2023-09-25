@@ -1,0 +1,89 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Header default s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo_txt_p.png" class="logo">
+                    </a>
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Header default e-->
+        <!--content s-->
+        <div class="container pb-0">
+            <div class="d-flex flex-column justify-content-center px-3 pt-4">
+                <div class="join3_wrap">
+                    <div class="join_img_wrap mx-auto">
+                        <img src="img/3d_img2.png" data-aos="fade-up" data-aos-duration="1000">
+                    </div>
+                    <div class="disc_list">
+                        <ul>
+                            <li>임대계약서 사진을 등록해주시면 렌택스에서 임대계약 정보를 등록해드립니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fixed_bottom full d-flex">
+                    <button type="button" class="btn btn-lg w-50 btn-gray" data-bs-toggle="modal"
+                        data-bs-target="#logout">나가기</button>
+                    <button type="button" class="btn btn-lg w-50 btn-primary" onclick="location.href='index.html'">렌택스
+                        구경하기</button>
+                </div>
+            </div>
+        </div>
+        <!--content e-->
+
+        <!-- Logout Modal s-->
+        <div class="modal fade" id="logout" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="logoutModalLabel">로그아웃</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3">
+                        로그아웃 하시겠습니까?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">로그아웃</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Logout Modal e-->
+
+
+        <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>

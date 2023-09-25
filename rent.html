@@ -1,0 +1,171 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">통계-임대료</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!-- 임대료정보 s-->
+            <div class="px-3 py-3 mb-2">
+                <div class="btn-group leaseinfo_select_sm">
+                    <button class="btn btn-white btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span>모든 임대료</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><span>역삼 래미안 그래이튼 1단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 2단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 3단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 4단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                    </ul>
+                </div>
+                <div class="leaseinfo_wrap d-none">
+                    <div class="d-flex justify-content-between">
+                        <div class="subtitle2">보증금 합계</div>
+                        <div class="subtitle2 cl_primary">
+                            <span>2,000</span>만 원
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 임대료정보 e-->
+
+            <!--datepicker s-->
+            <div class="d-flex bg-white flex-wrap align-items-center w-100 px-3 py-3 pt-0">
+                <div class="input-group align-items-center flex-nowrap">
+                    <div class="input-group-text px-0 gap-2">기간<span
+                            class="material-symbols-outlined">calendar_month</span></div>
+                    <div class="input-group gap-1">
+                        <input type="text" class="form-control" placeholder="시작일 선택" data-bs-toggle="modal"
+                            data-bs-target="#calendarmodal">
+                        <span class="input-group-text" id="basic-addon1">~</span>
+                        <input type="text" class="form-control" placeholder="종료일 선택" data-bs-toggle="modal"
+                            data-bs-target="#calendarmodal">
+                    </div>
+
+                </div>
+            </div>
+            <div class="px-3 pb-4">
+                <div class="btn_4wrap">
+                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 전</button>
+                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 후</button>
+                    <button type="button" class="btn btn-md btn-outline-primarylight">전년도</button>
+                    <button type="button" class="btn btn-md btn-outline-primarylight">금년도</button>
+                </div>
+                <button type="button" class="btn btn-lg w-100 btn-primary">조회</button>
+            </div>
+            <!--datepicker e-->
+            <div class="d-flex justify-content-between align-items-center px-3 pt-2 pb-3">
+                <div class="subtitle3">임대 건물명 / 전체 임대건물</div>
+                <div class="subtitle3"> <span>1,500</span>만 원</div>
+            </div>
+            <div>
+                <table class="table">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="25%">
+                        <col width="30%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">임대건물</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">임대료</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider  text-center">
+                        <tr>
+                            <td class="text-start"><span>역삼래미안그래이튼 1단지</span><span>101동</span><span>101호</span></td>
+                            <td>
+                                <div class="label"><span class="badge text-bg-success">완납</span></div>
+                            </td>
+                            <td class="text-end fw-bold"><span>1,000</span>만 원</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start"><span>팽이하우스</span><span>101호</span></td>
+                            <td>
+                                <div class="label"><span class="badge text-bg-danger">미납</span></div>
+                            </td>
+                            <td class="text-end fw-bold"><span>500</span>만 원</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start"><span>팽이하우스</span><span>201호</span></td>
+                            <td>
+                                <div class="label"><span class="badge text-bg-gray">공실</span></div>
+                            </td>
+                            <td class="text-end fw-bold"><span>-</span></td>
+                        </tr>
+
+                    </tbody>
+                </table> 
+                
+
+            </div>
+
+        </div>
+        <!--content e-->
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
+        <?
+        include("include/ooter.php");
+        ?>
+
+</body>
+
+</html>

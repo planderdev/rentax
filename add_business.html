@@ -1,0 +1,177 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대사업자 등록증 추가</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <div class="lease_info_list border-0">
+                <div class="subtitle3">임대 사업자 등록증 사진</div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-1">
+
+                        <label class="uploader" ondragover="return false">
+                            <span class="material-symbols-outlined">add</span>
+                            <img src="" class="">
+                            <input type="file" accept="image/*" name="file">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 pt-3">
+                <div class="info_box">
+                    <ul>
+                        <li>사업자등록증 사진이 등록되어 있지 않습니다.</li>
+                        <li>사업자등록증 사진을 등록해주세요. 렌택스에서 사업자정보를 등록해드립니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fixed_bottom full">
+                <button type="button" class="btn btn-lg w-100 btn-primary"
+                    onclick="location.href='add_business_success.html'">등록</button>
+            </div>
+
+
+        </div>
+        <!--content e-->
+
+
+        <script>
+            (function () {
+
+                function FileUploader(selector) {
+                    if (undefined !== selector) {
+                        this.init(selector);
+                    }
+                }
+
+                FileUploader.prototype.init = function (selector) {
+                    if (undefined !== this.$el) {
+                        this.unsuscribe();
+                    }
+
+                    this.$el = document.querySelector(selector);
+                    this.$fileInput = this.$el.querySelector('input');
+                    this.$img = this.$el.querySelector('img');
+
+                    this.suscribe();
+                }
+
+                FileUploader.prototype.suscribe = function () {
+                    this.$fileInput.addEventListener('change', _handleInputChange.bind(this));
+                    this.$img.addEventListener('load', _handleImageLoaded.bind(this));
+                    this.$el.addEventListener('dragenter', _handleDragEnter.bind(this));
+                    this.$el.addEventListener('dragleave', _handleDragLeave.bind(this));
+                    this.$el.addEventListener('drop', _handleDrop.bind(this));
+                }
+
+                FileUploader.prototype.unsuscribe = function () {
+                    this.$fileInput.removeEventListener('change', _handleInputChange.bind(this));
+                    this.$img.removeEventListener('load', _handleImageLoaded.bind(this));
+                    this.$el.removeEventListener('dragenter', _handleDragEnter.bind(this));
+                    this.$el.removeEventListener('dragleave', _handleDragLeave.bind(this));
+                    this.$el.removeEventListener('drop', _handleDrop.bind(this));
+                }
+
+                function _handleDragEnter(e) {
+                    e.preventDefault();
+
+                    if (!this.$el.classList.contains('dragging')) {
+                        this.$el.classList.add('dragging');
+                    }
+                }
+
+                function _handleDragLeave(e) {
+                    e.preventDefault();
+
+                    if (this.$el.classList.contains('dragging')) {
+                        this.$el.classList.remove('dragging');
+                    }
+                }
+
+                function _handleDrop(e) {
+                    e.preventDefault();
+                    this.$el.classList.remove('dragging');
+                    this.$img.files = e.dataTransfer.files;
+                    this.$fileInput.files = e.dataTransfer.files;
+                    _handleInputChange.call(this);
+                }
+
+                function _handleImageLoaded() {
+                    if (!this.$img.classList.contains('loaded')) {
+                        this.$img.classList.add('loaded');
+                    }
+                }
+
+                function _handleInputChange(e) {
+                    var file = (undefined !== e)
+                        ? e.target.files[0]
+                        : this.$img.files[0];
+
+                    var pattern = /image-*/;
+                    var reader = new FileReader();
+
+                    if (!file.type.match(pattern)) {
+                        alert('invalid format');
+                        return;
+                    }
+
+                    if (this.$el.classList.contains('loaded')) {
+                        this.$el.classList.remove('loaded');
+                    }
+
+                    reader.onload = _handleReaderLoaded.bind(this);
+                    reader.readAsDataURL(file);
+                }
+
+                function _handleReaderLoaded(e) {
+                    var reader = e.target;
+                    this.$img.src = reader.result;
+                    this.$el.classList.add('loaded');
+                }
+
+                window.FileUploader = FileUploader;
+
+            }());
+
+
+            new FileUploader('.uploader');
+        </script>
+
+</body>
+
+</html>

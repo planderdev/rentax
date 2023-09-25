@@ -1,0 +1,261 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+      <!--Title Header s-->
+      <header
+      class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+      <nav class="navbar">
+          <div class="container-fluid"> 
+              <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+              </button>
+              <div data-include1="header" id="header"></div>
+              <div class="header_title">임대료 등록</div>
+              <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                  data-bs-target="#alarmmodal">
+                  <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                      <span class="visually-hidden">새로운 알림</span>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                      <path
+                          d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                  </svg>
+              </button> 
+          </div>
+      </nav>
+  </header>
+  <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!--임대정보 인클루드 s-->
+            <div data-include2="lease_info" id="lease_info"></div>
+            <!--임대정보 인클루드 e-->
+            <hr>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="lease-tab" data-bs-toggle="tab" data-bs-target="#lease-tab-pane"
+                        type="button" role="tab" aria-controls="lease-tab-pane" aria-selected="true">임대료</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other-tab-pane"
+                        type="button" role="tab" aria-controls="other-tab-pane" aria-selected="false">기타수입</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="deposit-tab" data-bs-toggle="tab" data-bs-target="#deposit-tab-pane"
+                        type="button" role="tab" aria-controls="deposit-tab-pane" aria-selected="false">보증금</button>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="lease-tab-pane" role="tabpanel" aria-labelledby="lease-tab"
+                    tabindex="0">
+                    <div class="px-3 pt-4">
+                        <div class="subtitle2 pb-4">2023년 5월 (11회차)</div>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="subtitle3 w-50">입금일</div>
+                                <div class="w-50">
+                                    <div class="input-group calendar " data-bs-toggle="modal"
+                                        data-bs-target="#calendarmodal">
+                                        <input type="text" class="form-control" placeholder="2023-08-17"
+                                            aria-label="calendar" aria-describedby="basic-addon1">
+                                        <span class="material-symbols-outlined">calendar_month</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 pb-3">
+                                <div class="subtitle3 w-50">임대료</div>
+                                <div class="subtitle3 w-50 text-end"><span>500,000</span>원</div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 ">
+                            <button type="button" class="btn btn-lg w-50 btn-danger" onclick="location.href='#'">
+                                미납 등록</button>
+                            <button type="button" class="btn btn-lg w-50 btn-primary" onclick="location.href='#'">
+                                입금 등록</button>
+                        </div>
+                    </div>
+
+                    <div class="px-3 pt-5">
+                        <div class="subtitle2 mb-3">메모</div>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="other-tab-pane" role="tabpanel" aria-labelledby="other-tab" tabindex="0">
+                    <form>
+                        <div class="px-3 pt-4">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center pt-2 pb-2">
+                                    <div class="subtitle3 w-50">날짜</div>
+                                    <div class="w-50">
+                                        <div class="input-group calendar " data-bs-toggle="modal"
+                                            data-bs-target="#calendarmodal">
+                                            <input type="text" class="form-control" placeholder="2023-08-17"
+                                                aria-label="calendar" aria-describedby="basic-addon1">
+                                            <span class="material-symbols-outlined">calendar_month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center pt-2 pb-2">
+                                    <div class="subtitle3 w-50">거래 내용</div>
+                                    <select class="form-select  form-select-lg w-50"
+                                        aria-label="Default select example">
+                                        <option selected>임대 계약 위약금</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center pt-2 pb-2">
+                                    <div class="subtitle3 w-50">금액</div>
+                                    <input type="text" class="form-control w-50 text-end" aria-label="금액"
+                                        aria-describedby="basic-addon1" maxlength="10"
+                                        onkeyup="inputNumberFormat(this);">
+                                </div>
+                            </div>
+
+                            <div class="bottom_info">
+                                <div class="caption2 cl_info">
+                                    <ul>
+                                        <li>임대 계약파기에 따른 위약금, 관리비 등 임대료외 다양한 수입금을 등록할 수 있습니다.</li>
+                                        <li>등록한 내용은 장부에 자동으로 저장됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fixed_bottom full">
+                            <button type="submit" class="btn btn-lg btn-primary">
+                                저장</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="tab-pane fade" id="deposit-tab-pane" role="tabpanel" aria-labelledby="deposit-tab"
+                    tabindex="0"> 
+                    <form>
+                        <div class="pt-4">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="25%">
+                                    <col width="30%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">약정일</th>
+                                        <th scope="col">입금일</th>
+                                        <th scope="col">금액</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider caption2 text-center">
+                                    <tr>
+                                        <td>보증금</td>
+                                        <td>21-04-20</td>
+                                        <td>
+                                            <div class="input-group calendar " data-bs-toggle="modal"
+                                                data-bs-target="#calendarmodal">
+                                                <input type="text"
+                                                    class="form-control text-center bg-primary-lightest border-0 cl_primary_dark caption2"
+                                                    placeholder="23-04-20" aria-label="calendar"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </td>
+                                        <td class="text-end">2,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>중도금</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="input-group calendar " data-bs-toggle="modal"
+                                                data-bs-target="#calendarmodal">
+                                                <input type="text"
+                                                    class="form-control text-center bg-primary-lightest border-0 cl_primary_light caption2"
+                                                    placeholder="날짜입력" aria-label="calendar"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </td>
+                                        <td class="text-end">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>보증금</td>
+                                        <td>21-06-15</td>
+                                        <td>
+                                            <div class="input-group calendar " data-bs-toggle="modal"
+                                                data-bs-target="#calendarmodal">
+                                                <input type="text"
+                                                    class="form-control text-center bg-primary-lightest border-0 cl_primary_light caption2"
+                                                    placeholder="날짜입력" aria-label="calendar"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </td>
+                                        <td class="text-end">8,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="d-flex justify-content-between align-items-center px-3 pt-2 pb-3">
+                                <div class="subtitle3">보증금 합계</div>
+                                <div class="subtitle3"><span>10,000,000</span>원</div>
+                            </div>
+
+
+                            <div class="bottom_info px-3">
+                                <div class="caption2 cl_info">
+                                    <ul>
+                                        <li>보증금이 입금된 입금일을 입력해주세요.</li>
+                                        <li>등록한 내용은 장부에 자동으로 저장됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fixed_bottom ">
+                            <button type="submit" class="btn btn-lg w-100 btn-primary">
+                                저장</button>
+                        </div>
+                    </form> 
+                </div>
+            </div> 
+        </div>
+        <!--content e--> 
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e--> 
+
+        <?
+include("include/footer.php");
+?>
+ 
+
+</body> 
+
+</html>

@@ -1,0 +1,266 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">납부한 세금 등록</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button> 
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <div class="px-3 py-3">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>납부 세금 종류</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <hr>
+            <form>
+                <!--info s-->
+                <div class="lease_info_list_wrap">
+                    <div class="lease_info_list flex-1 border-bottom">
+                        <div class="subtitle2">거래 일자</div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1">
+                                <div class="input-group calendar " data-bs-toggle="modal"
+                                    data-bs-target="#calendarmodal">
+                                    <input type="text" class="form-control" placeholder="2023-08-30"
+                                        aria-label="calendar" aria-describedby="basic-addon1">
+                                    <span class="material-symbols-outlined">calendar_month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lease_info_list">
+                        <div class="subtitle2">거래처</div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1">
+                                <input type="text" class="form-control" placeholder="거래처" value=""
+                                    aria-label="거래처" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lease_info_list">
+                        <div class="subtitle2">내용</div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1">
+                                <input type="text" class="form-control" placeholder="내용" value=""
+                                    aria-label="내용" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="lease_info_list">
+                        <div class="subtitle2">거래 금액</div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1">
+                                <span class="input-group-text absolute" id="basic-addon1">원</span>
+                                <input type="text" class="form-control text-end pe-5" placeholder="거래 금액"
+                                    value="500,000" aria-label="거래 금액" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+ 
+
+                    <div class="lease_info_list">
+                        <div class="subtitle2">영수증 이미지</div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1">
+
+                                <label class="uploader" ondragover="return false">
+                                    <span class="material-symbols-outlined">add</span>
+                                    <img src="" class="">
+                                    <input type="file" accept="image/*" name="file">
+                                </label>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--info e-->
+                <div class="fixed_bottom full d-flex">
+                    <button type="button" class="btn btn-lg w-50 btn-primary-light" onclick="location.href='schedule.html'">
+                        취소</button>
+                    <button type="submit" class="btn btn-lg w-50 btn-primary">
+                        등록</button>
+                </div>
+            </form>
+
+        </div>
+        <!--content e-->
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
+
+        <?
+        include("include/footer.php");
+        ?>
+
+        <script>
+            $("#setting3").on("click", function () {
+                if ($(this).is(':checked') == true) {
+                    $("#check_list2").show();
+                } else {
+                    $("#check_list2").hide();
+                }
+            });
+
+        </script>
+
+        <script>
+            (function () {
+
+                function FileUploader(selector) {
+                    if (undefined !== selector) {
+                        this.init(selector);
+                    }
+                }
+
+                FileUploader.prototype.init = function (selector) {
+                    if (undefined !== this.$el) {
+                        this.unsuscribe();
+                    }
+
+                    this.$el = document.querySelector(selector);
+                    this.$fileInput = this.$el.querySelector('input');
+                    this.$img = this.$el.querySelector('img');
+
+                    this.suscribe();
+                }
+
+                FileUploader.prototype.suscribe = function () {
+                    this.$fileInput.addEventListener('change', _handleInputChange.bind(this));
+                    this.$img.addEventListener('load', _handleImageLoaded.bind(this));
+                    this.$el.addEventListener('dragenter', _handleDragEnter.bind(this));
+                    this.$el.addEventListener('dragleave', _handleDragLeave.bind(this));
+                    this.$el.addEventListener('drop', _handleDrop.bind(this));
+                }
+
+                FileUploader.prototype.unsuscribe = function () {
+                    this.$fileInput.removeEventListener('change', _handleInputChange.bind(this));
+                    this.$img.removeEventListener('load', _handleImageLoaded.bind(this));
+                    this.$el.removeEventListener('dragenter', _handleDragEnter.bind(this));
+                    this.$el.removeEventListener('dragleave', _handleDragLeave.bind(this));
+                    this.$el.removeEventListener('drop', _handleDrop.bind(this));
+                }
+
+                function _handleDragEnter(e) {
+                    e.preventDefault();
+
+                    if (!this.$el.classList.contains('dragging')) {
+                        this.$el.classList.add('dragging');
+                    }
+                }
+
+                function _handleDragLeave(e) {
+                    e.preventDefault();
+
+                    if (this.$el.classList.contains('dragging')) {
+                        this.$el.classList.remove('dragging');
+                    }
+                }
+
+                function _handleDrop(e) {
+                    e.preventDefault();
+                    this.$el.classList.remove('dragging');
+                    this.$img.files = e.dataTransfer.files;
+                    this.$fileInput.files = e.dataTransfer.files;
+                    _handleInputChange.call(this);
+                }
+
+                function _handleImageLoaded() {
+                    if (!this.$img.classList.contains('loaded')) {
+                        this.$img.classList.add('loaded');
+                    }
+                }
+
+                function _handleInputChange(e) {
+                    var file = (undefined !== e)
+                        ? e.target.files[0]
+                        : this.$img.files[0];
+
+                    var pattern = /image-*/;
+                    var reader = new FileReader();
+
+                    if (!file.type.match(pattern)) {
+                        alert('invalid format');
+                        return;
+                    }
+
+                    if (this.$el.classList.contains('loaded')) {
+                        this.$el.classList.remove('loaded');
+                    }
+
+                    reader.onload = _handleReaderLoaded.bind(this);
+                    reader.readAsDataURL(file);
+                }
+
+                function _handleReaderLoaded(e) {
+                    var reader = e.target;
+                    this.$img.src = reader.result;
+                    this.$el.classList.add('loaded');
+                }
+
+                window.FileUploader = FileUploader;
+
+            }());
+
+
+            new FileUploader('.uploader');
+        </script>
+
+</body>
+
+
+</html>

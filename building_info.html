@@ -1,0 +1,853 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대 건물 정보</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!-- Tab s-->
+            <ul class="nav nav-tabs manage" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="building-tab" data-bs-toggle="tab"
+                        data-bs-target="#building-tab-pane" type="button" role="tab" aria-controls="building-tab-pane"
+                        aria-selected="true">임대건물</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business-tab-pane"
+                        type="button" role="tab" aria-controls="business-tab-pane" aria-selected="false">사업자정보</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="lease-business-tab" data-bs-toggle="tab"
+                        data-bs-target="#lease-business-tab-pane" type="button" role="tab"
+                        aria-controls="lease-business-tab-pane" aria-selected="false">주택임대 사업자 정보</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="building-setting-tab" data-bs-toggle="tab"
+                        data-bs-target="#building-setting-tab-pane" type="button" role="tab"
+                        aria-controls="building-setting-tab-pane" aria-selected="false">설정</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="building-tab-pane" role="tabpanel"
+                    aria-labelledby="building-tab" tabindex="0">
+                    <form>
+                        <!--info s-->
+                        <div class="lease_info_list_wrap">
+                            <div class="lease_info_list">
+                                <div class="subtitle2">임대 건물명</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        <input type="text" class="form-control" placeholder="임대 건물명" value="팽이 하우스"
+                                            aria-label="임대 건물명" aria-describedby="basic-addon2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">소재지</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        <input type="text" class="form-control" placeholder="소재지"
+                                            value="제주도 애월읍 평화로 1254, 301호" aria-label="소재지"
+                                            aria-describedby="basic-addon2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="subtitle2">건물 형태</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                            <option selected>다세대주택</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="subtitle2">건물 구분</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                            <option selected>일반건물(9억원 미만)</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="lease_info_list flex-1">
+                                    <div class="subtitle2">매입/건설</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <select class="form-select form-select-lg "
+                                                aria-label=".form-select-lg example">
+                                                <option selected>매입</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lease_info_list flex-1 border-bottom">
+                                    <div class="subtitle2">취득일</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <div class="input-group calendar " data-bs-toggle="modal"
+                                                data-bs-target="#calendarmodal">
+                                                <input type="text" class="form-control" placeholder="2023-08-30"
+                                                    aria-label="calendar" aria-describedby="basic-addon1">
+                                                <span class="material-symbols-outlined">calendar_month</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="lease_info_list flex-1">
+                                    <div class="subtitle2">공동소유 여부</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <select class="form-select form-select-lg "
+                                                aria-label=".form-select-lg example">
+                                                <option selected>단독 소유</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lease_info_list flex-1 border-bottom">
+                                    <div class="subtitle2">대표자 여부</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <select class="form-select form-select-lg "
+                                                aria-label=".form-select-lg example">
+                                                <option selected>대표자</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="lease_info_list flex-1">
+                                    <div class="subtitle2">전용면적</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <input type="text" class="form-control" placeholder="전용면적" value="23㎡"
+                                                aria-label="전용면적" aria-describedby="basic-addon2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lease_info_list flex-1">
+                                    <div class="subtitle2">공용면적</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <input type="text" class="form-control" placeholder="공용면적" value="15㎡"
+                                                aria-label="공용면적" aria-describedby="basic-addon2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lease_info_list flex-1 border-bottom">
+                                    <div class="subtitle2">합계면적</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            <input type="text" class="form-control" placeholder="합계면적" value="38㎡"
+                                                aria-label="합계면적" aria-describedby="basic-addon2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">지자체 등록임대주택 여부</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                            <option selected>등록임대주택</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">메모</div>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">등록임대주택 등록사항</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        민간주택임대주택 종류
+                                    </div>
+                                    <div class="flex-1 ">
+                                        <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                            <option selected>아파트</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        건설/매입
+                                    </div>
+                                    <div class="flex-1 ">
+                                        <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                            <option selected>매입</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        의무 임대 시작일
+                                    </div>
+                                    <div class="flex-1 ">
+                                        <div class="input-group calendar " data-bs-toggle="modal"
+                                            data-bs-target="#calendarmodal">
+                                            <input type="text" class="form-control" placeholder="2023-08-30"
+                                                aria-label="calendar" aria-describedby="basic-addon1">
+                                            <span class="material-symbols-outlined">calendar_month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        등록 임대 말소일
+                                    </div>
+                                    <div class="flex-1 ">
+                                        <div class="input-group calendar " data-bs-toggle="modal"
+                                            data-bs-target="#calendarmodal">
+                                            <input type="text" class="form-control" placeholder="2023-08-30"
+                                                aria-label="calendar" aria-describedby="basic-addon1">
+                                            <span class="material-symbols-outlined">calendar_month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        등록 임대 재등록일
+                                    </div>
+                                    <div class="flex-1 ">
+                                        <div class="input-group calendar " data-bs-toggle="modal"
+                                            data-bs-target="#calendarmodal">
+                                            <input type="text" class="form-control" placeholder="2023-08-30"
+                                                aria-label="calendar" aria-describedby="basic-addon1">
+                                            <span class="material-symbols-outlined">calendar_month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--info e-->
+                        <div class="fixed_bottom full d-flex  ">
+                            <button type="button" class="btn btn-lg w-50 btn-primary-light" data-bs-toggle="modal"
+                                data-bs-target="#deletemodal">
+                                삭제</button>
+                            <button type="submit" class="btn btn-lg w-50 btn-primary"
+                                onclick="location.href='building_manage.html'">
+                                확인</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="business-tab-pane" role="tabpanel" aria-labelledby="business-tab"
+                    tabindex="0">
+                    <form>
+                        <!--info s-->
+                        <div class="lease_info_list_wrap">
+                            <div class="lease_info_list">
+                                <div class="subtitle2">사업자 등록번호</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        123-12-12345
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">상호명</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        팽이 하우스
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="subtitle2">대표자명</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        김팽이
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="subtitle2">사업장 주소</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        제주도 제주시 100
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="lease_info_list flex-1">
+                                    <div class="subtitle2">업태</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            부동산
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lease_info_list flex-1 border-bottom">
+                                    <div class="subtitle2">업종</div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-1">
+                                            임대
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">핸드폰 번호</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        010-1234-5678
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="subtitle2">공동 사업자</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        50%
+                                    </div>
+                                    <div class="flex-2">
+                                        김팽이2
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        50%
+                                    </div>
+                                    <div class="flex-2">
+                                        김팽이2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="subtitle2">사업자 등록증 사진</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+
+                                        <label class="uploader" ondragover="return false">
+                                            <span class="material-symbols-outlined">add</span>
+                                            <img src="" class="">
+                                            <input type="file" accept="image/*" name="file">
+                                        </label>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--info e-->
+                        <div class="fixed_bottom full d-flex  ">
+                            <button type="button" class="btn btn-lg w-50 btn-primary-light" data-bs-toggle="modal"
+                                data-bs-target="#deletemodal">
+                                삭제</button>
+                            <button type="submit" class="btn btn-lg w-50 btn-primary"
+                                onclick="location.href='building_manage.html'">
+                                확인</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="lease-business-tab-pane" role="tabpanel"
+                    aria-labelledby="lease-business-tab" tabindex="0">
+                    <!--info s-->
+                    <div class="lease_info_list_wrap">
+                        <div class="lease_info_list">
+                            <div class="subtitle2">등록번호</div>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-1">
+                                    강남구-2020-임대사업자-514
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lease_info_list">
+                            <div class="subtitle2">최초 등록일</div>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-1">
+                                    2021.07.03
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lease_info_list">
+                            <div class="subtitle2">임대사업자 등록증 사진</div>
+                            <div class="d-flex align-items-center">
+                                <div class="border-1 w-70 mx-auto">
+                                    <img src="https://m.jhedu.co.kr/file_data/jhedu24/2021/11/25/bc8983d1722f72ffb9479fc119232747.jpg"
+                                        class="w-100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--info e-->
+                    <div class="fixed_bottom full d-flex  ">
+                        <button type="button" class="btn btn-lg w-50 btn-primary-light" data-bs-toggle="modal"
+                            data-bs-target="#deletemodal2">
+                            삭제</button>
+                        <button type="button" class="btn btn-lg w-50 btn-primary"
+                            onclick="location.href='building_manage.html'">
+                            확인</button>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="building-setting-tab-pane" role="tabpanel"
+                    aria-labelledby="building-setting-tab" tabindex="0">
+                    <form>
+                        <!--info s-->
+                        <div class="lease_info_list_wrap">
+                            <div class="lease_info_list">
+                                <div class="switch_title">
+                                    <div class="subtitle2">알림</div>
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input " type="checkbox" role="switch" id="setting1"
+                                            checked>
+                                    </div>
+                                </div>
+                                <div class="body2 cl_info">
+                                    임대일정을 알려드립니다.
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="switch_title">
+                                    <div class="subtitle2">임대료 입금 확인 알림</div>
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input" type="checkbox" name="check1" role="switch"
+                                            id="setting2">
+                                    </div>
+                                </div>
+                                <div id="check_list1" style="display:none">
+                                    <div class="d-flex">
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="update-1"
+                                                value="option1">
+                                            <label class="form-check-label" for="update-1">입금 당일</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="update-2"
+                                                value="option2">
+                                            <label class="form-check-label" for="update-2">입금 3일 후</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="update-3"
+                                                value="option3">
+                                            <label class="form-check-label" for="update-3">입금 7일 후</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="switch_title">
+                                    <div class="subtitle2">입주일 알림</div>
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input " type="checkbox" role="switch" id="setting3">
+                                    </div>
+                                </div>
+                                <div class="body2 cl_info">
+                                    입주 / 임차인의 이사 전 알림을 받을 수 있습니다.
+                                </div>
+                                <div id="check_list2" style="display:none">
+                                    <div class="d-flex">
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="move-1" value="option1">
+                                            <label class="form-check-label" for="move-1">1일 전</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="move-2" value="option2">
+                                            <label class="form-check-label" for="move-2">3일 전</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="move-3" value="option3">
+                                            <label class="form-check-label" for="move-3">7일 전</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lease_info_list">
+                                <div class="switch_title">
+                                    <div class="subtitle2">계약 만기일 알림</div>
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input " type="checkbox" role="switch" id="setting4">
+                                    </div>
+                                </div>
+                                <div class="body2 cl_info">
+                                    계약 만기일 전 알림을 받을 수 있습니다.
+                                </div>
+                                <div id="check_list3" style="display:none">
+                                    <div class="d-flex">
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="duedate-1"
+                                                value="option1">
+                                            <label class="form-check-label" for="duedate-1">2개월 10일 전</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="checkbox" id="duedate-2"
+                                                value="option2">
+                                            <label class="form-check-label" for="duedate-2">2개월 20일 전</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="switch_title">
+                                    <div class="subtitle2">임대료 청구서 자동 발송</div>
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input " type="checkbox" role="switch" id="setting5">
+                                    </div>
+                                </div>
+                                <div class="body2 cl_info">
+                                    임차인에게 임대료 납입일 전에 청구서를 발송합니다.
+                                </div>
+                                <div id="check_list4" style="display:none">
+                                    <div class="d-flex">
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="radio" name="day-1" id="day-1"
+                                                value="option1">
+                                            <label class="form-check-label" for="day-1">1일 전</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="radio" name="day-1" id="day-2"
+                                                value="option2">
+                                            <label class="form-check-label" for="day-2">3일 전</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-1">
+                                            <input class="form-check-input" type="radio" name="day-1" id="day-3"
+                                                value="option3">
+                                            <label class="form-check-label" for="day-3">7일 전</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lease_info_list">
+                                <div class="subtitle2">임대료 입금 계좌</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        계좌번호
+                                    </div>
+                                    <div class="flex-1 subtitle3 text-end">
+                                        123-12-123-12-123
+                                    </div> 
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1">
+                                        은행
+                                    </div>
+                                    <div class="flex-1 subtitle3 text-end">
+                                        국민은행
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1 ">
+                                        예금주
+                                    </div>
+                                    <div class="flex-1 subtitle3 text-end">
+                                        홍길동
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--info e-->
+
+                        <div class="fixed_bottom full d-flex">
+                            <button type="submit" class="btn btn-lg w-100 btn-primary"
+                                onclick="location.href='building_manage.html'">
+                                확인</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Tab e-->
+
+        </div>
+        <!--content e-->
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
+
+        <!-- deletemodal s-->
+        <div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="deletemodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="deletemodalLabel">삭제 알림</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3">
+                        <p>
+                            임대건물(호실)을 삭제하면 임대건물(호실)과 관련된 모든 자료가 삭제됩니다.
+                        </p>
+                        <p class="cl_danger">
+                            정말 삭제하시겠습니까?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- deletemodal e-->
+
+
+        <!-- 주택임대사업자 deletemodal s-->
+        <div class="modal fade" id="deletemodal2" tabindex="-1" aria-labelledby="deletemodalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="deletemodalLabel2">삭제 알림</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3">
+                        <p>
+                            지자체신고 주택임대사업자 정보를 삭제하면 지자체신고 사업자등록 정보만 삭제 됩니다. 임대 매출에 관한 정보는 삭제되지 않습니다.
+                        </p>
+                        <p class="cl_danger">
+                            정말 삭제하시겠습니까?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 주택임대사업자 deletemodal e-->
+
+        <script>
+            $("#setting2").on("click", function () {
+                if ($(this).is(':checked') == true) {
+                    $("#check_list1").show();
+                } else {
+                    $("#check_list1").hide();
+                }
+            });
+            $("#setting3").on("click", function () {
+                if ($(this).is(':checked') == true) {
+                    $("#check_list2").show();
+                } else {
+                    $("#check_list2").hide();
+                }
+            });
+            $("#setting4").on("click", function () {
+                if ($(this).is(':checked') == true) {
+                    $("#check_list3").show();
+                } else {
+                    $("#check_list3").hide();
+                }
+            });
+            $("#setting5").on("click", function () {
+                if ($(this).is(':checked') == true) {
+                    $("#check_list4").show();
+                } else {
+                    $("#check_list4").hide();
+                }
+            });
+        </script>
+
+        <script>
+            (function () {
+
+                function FileUploader(selector) {
+                    if (undefined !== selector) {
+                        this.init(selector);
+                    }
+                }
+
+                FileUploader.prototype.init = function (selector) {
+                    if (undefined !== this.$el) {
+                        this.unsuscribe();
+                    }
+
+                    this.$el = document.querySelector(selector);
+                    this.$fileInput = this.$el.querySelector('input');
+                    this.$img = this.$el.querySelector('img');
+
+                    this.suscribe();
+                }
+
+                FileUploader.prototype.suscribe = function () {
+                    this.$fileInput.addEventListener('change', _handleInputChange.bind(this));
+                    this.$img.addEventListener('load', _handleImageLoaded.bind(this));
+                    this.$el.addEventListener('dragenter', _handleDragEnter.bind(this));
+                    this.$el.addEventListener('dragleave', _handleDragLeave.bind(this));
+                    this.$el.addEventListener('drop', _handleDrop.bind(this));
+                }
+
+                FileUploader.prototype.unsuscribe = function () {
+                    this.$fileInput.removeEventListener('change', _handleInputChange.bind(this));
+                    this.$img.removeEventListener('load', _handleImageLoaded.bind(this));
+                    this.$el.removeEventListener('dragenter', _handleDragEnter.bind(this));
+                    this.$el.removeEventListener('dragleave', _handleDragLeave.bind(this));
+                    this.$el.removeEventListener('drop', _handleDrop.bind(this));
+                }
+
+                function _handleDragEnter(e) {
+                    e.preventDefault();
+
+                    if (!this.$el.classList.contains('dragging')) {
+                        this.$el.classList.add('dragging');
+                    }
+                }
+
+                function _handleDragLeave(e) {
+                    e.preventDefault();
+
+                    if (this.$el.classList.contains('dragging')) {
+                        this.$el.classList.remove('dragging');
+                    }
+                }
+
+                function _handleDrop(e) {
+                    e.preventDefault();
+                    this.$el.classList.remove('dragging');
+                    this.$img.files = e.dataTransfer.files;
+                    this.$fileInput.files = e.dataTransfer.files;
+                    _handleInputChange.call(this);
+                }
+
+                function _handleImageLoaded() {
+                    if (!this.$img.classList.contains('loaded')) {
+                        this.$img.classList.add('loaded');
+                    }
+                }
+
+                function _handleInputChange(e) {
+                    var file = (undefined !== e)
+                        ? e.target.files[0]
+                        : this.$img.files[0];
+
+                    var pattern = /image-*/;
+                    var reader = new FileReader();
+
+                    if (!file.type.match(pattern)) {
+                        alert('invalid format');
+                        return;
+                    }
+
+                    if (this.$el.classList.contains('loaded')) {
+                        this.$el.classList.remove('loaded');
+                    }
+
+                    reader.onload = _handleReaderLoaded.bind(this);
+                    reader.readAsDataURL(file);
+                }
+
+                function _handleReaderLoaded(e) {
+                    var reader = e.target;
+                    this.$img.src = reader.result;
+                    this.$el.classList.add('loaded');
+                }
+
+                window.FileUploader = FileUploader;
+
+            }());
+
+
+            new FileUploader('.uploader');
+        </script>
+
+</body>
+
+
+</html>

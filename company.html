@@ -1,0 +1,79 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">사업자 정보</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+
+        <!--content s-->
+        <div class="container pb-0">
+<div class="vertical-center">
+            <div class="d-flex flex-column justify-content-center px-3 text-center align-items-center "> 
+<img src="img/logo.png" class="w-40">
+                <div class="pt-5">
+                    <div class="subtitle2 pb-2">주식회사 해듬</div>
+                    <div class="d-flex gap-2 flex-column cl_description align-items-center">
+                        <div class="d-flex  gap-2">
+                            <div class="fw-bold">사업자등록번호</div>
+                            <div>830-88-01956</div>
+                        </div>
+                        <div class="d-flex  gap-2">
+                            <div class="fw-bold">통신판매업신고번호</div>
+                            <div>2021-안덕-0091호</div>
+                        </div>
+                        <div class="d-flex   gap-2">
+                            <div class="fw-bold">대표자</div>
+                            <div>김세웅</div>
+                        </div>
+                        <div class="d-flex  gap-2">
+                            <div class="fw-bold">개인정보보호 책임자</div>
+                            <div>김지연</div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <div class="fw-bold">대표전화번호</div>
+                            <div>064-900-1590</div>
+                        </div>
+  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--content e-->
+        <?
+        include("include/footer.php");
+        ?>
+ 
+
+</body>
+
+
+</html>

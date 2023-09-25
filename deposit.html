@@ -1,0 +1,126 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid"> 
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">통계-보증금</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button> 
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!-- 보증금정보 s-->
+            <div class="px-3 py-3 mb-2">
+                <div class="btn-group leaseinfo_select_sm">
+                    <button class="btn btn-white btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span>모든 임대 보증금</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><span>역삼 래미안 그래이튼 1단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 2단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 3단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                        <li><span>역삼 래미안 그래이튼 4단지</span><br><span class="me-1">103동</span><span>101호</span><span
+                                class="line"></span><span>이몽룡</span></li>
+                    </ul>
+                </div> 
+            </div>
+            <!-- 보증금정보 e-->
+            <div class="d-flex justify-content-between align-items-center px-3 pt-2 pb-3">
+                <div class="subtitle3">보증금 합계</div>
+                <div class="subtitle3"><span class="cl_primary">2,000</span>만 원</div>
+            </div>
+            <div>
+                <table class="table">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="25%">
+                        <col width="30%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">임대건물</th>
+                            <th scope="col">계약 종료일</th>
+                            <th scope="col">보증금</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider text-center">
+                        <tr>
+                            <td class="text-start">역삼래미안그래이튼 1단지 101동 101호</td>
+                            <td>
+                                22.06.01
+                            </td>
+                            <td class="text-end fw-bold"><span>1,000</span>만 원</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">역삼래미안그래이튼 1단지 101동 101호</td>
+                            <td>
+                                22.06.01
+                            </td>
+                            <td class="text-end fw-bold"><span>1,000</span>만 원</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+               
+            </div>
+        </div>
+        <!--content e-->
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
+
+        <?
+include("include/footer.php");
+?>
+
+
+</body>
+</html>

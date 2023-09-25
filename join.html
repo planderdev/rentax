@@ -1,0 +1,92 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--content s-->
+        <div class="container pb-0">
+            <div class="d-flex flex-column px-3  ">
+                <div class="join" data-aos="fade-up" data-aos-duration="1000">
+                    <h2>렌택스는 부동산 임대사업자를 위한 임대/세무 관리 서비스입니다.</h2>
+                    <ul>
+                        <li>임대계약서 사진을 등록하면 임대관리가 시작됩니다.
+                        </li>
+                        <li>장부가 자동으로 만들어 집니다.
+                        </li>
+                        <li>셀프 세금 신고를 할 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fixed_bottom full">
+                    <div class="form-check my-4 mx-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            렌택스의 약관 및 개인정보처리방침에 동의합니다.
+                        </label>
+                    </div>
+
+                    <button type="button" class="btn btn-lg w-100 btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#terms">
+                        회원가입</button>
+                </div>
+            </div>
+        </div>
+        <!--content e-->
+ 
+        <!--modal s-->
+        <div class="modal fade" id="terms" tabindex="-1" aria-labelledby="termsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">RenTax 앱 사용 권한 안내</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="terms_list">
+                            <div class="subtitle2">서비스 이용을 위해 다음의 권한을 허용해 주세요.</div>
+                            <div>
+                                <div class="title"><span class="material-symbols-outlined">home</span>주소록</div>
+                                <div class="sub">전화걸기 시 사용</div>
+                            </div>
+
+                            <div>
+                                <div class="title"><span class="material-symbols-outlined">call</span>전화걸기</div>
+                                <div class="sub">전화걸기 시 사용</div>
+                            </div>
+
+                            <div>
+                                <div class="title"><span class="material-symbols-outlined">save</span>저장공간</div>
+                                <div class="sub">사진, 갤러리, 미디어 파일 접근 시 사용</div>
+                            </div>
+
+                            <div>
+                                <div class="title"><span class="material-symbols-outlined">photo_camera </span>카메라</div>
+                                <div class="sub">영수증 촬영 시 사용</div>
+                            </div>
+                            <div>
+                                <div class="title"><span class="material-symbols-outlined">notifications </span>알림</div>
+                                <div class="sub">Push 메시지 수신 시 사용</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-md btn-gray" data-bs-dismiss="modal">거부</button>
+                        <button type="button" class="btn btn-md  btn-primary"
+                            onclick="location.href='join1.html'">허용</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal e-->
+
+        <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>
