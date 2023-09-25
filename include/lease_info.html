@@ -1,0 +1,55 @@
+  <!-- 임대정보 s-->
+  <div class="px-3 py-3 mb-2"> 
+    <div class="btn-group leaseinfo_select">
+      <button class="btn btn-white btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span>역삼 래미안 그래이튼 1단지</span><br><span class="me-1">103동</span><span>101호</span><span class="line"></span><span>이몽룡</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><span>역삼 래미안 그래이튼 1단지</span><br><span class="me-1">103동</span><span>101호</span><span class="line"></span><span>이몽룡</span></li>
+        <li><span>역삼 래미안 그래이튼 2단지</span><br><span class="me-1">103동</span><span>101호</span><span class="line"></span><span>이몽룡</span></li>
+        <li><span>역삼 래미안 그래이튼 3단지</span><br><span class="me-1">103동</span><span>101호</span><span class="line"></span><span>이몽룡</span></li>
+        <li><span>역삼 래미안 그래이튼 4단지</span><br><span class="me-1">103동</span><span>101호</span><span class="line"></span><span>이몽룡</span></li>
+      </ul>
+    </div> 
+    <div class="leaseinfo_wrap">
+      <div class="d-flex justify-content-between">
+        <div class="subtitle2">임대 정보</div>
+        <div class="body1">
+          <span class="price">500,000</span><span>원</span>
+          <span>15일</span>
+          <span>후불</span>
+        </div>
+      </div>
+
+      <div class="leaseinfo_btn">
+        <button type="button" class="btn btn-md btn-outline-link" data-bs-toggle="modal" data-bs-target="#smsModal"><span
+            class="material-symbols-outlined">mail</span>문자하기</button>
+        <button type="button" class="btn btn-md btn-outline-link"><span
+            class="material-symbols-outlined">call</span>전화하기</button>
+      </div>
+    </div> 
+  </div>
+  <!-- 임대정보 e-->
+
+  <!-- SMS Modal -->
+<div class="modal fade" id="smsModal" tabindex="-1" aria-labelledby="smsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="smsModalLabel">문자 메세지 보내기</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-3">
+        [*1*]님 임대료 입금 확인이 안됩니다.임대료 입금여부를 확인해 주세요.
+        <div>
+임대료 : [*2*]입금계좌 : [*은행명*] / [*계좌번호*] / [*성명*]
+</div>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-primary">문자보내기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
