@@ -1,0 +1,256 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">신고도움 비용안내</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+
+             <!--step s-->
+             <div class="stepper_wrapper">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                 </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">2</div>
+                 </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">3</div>
+                 </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">4</div>
+                 </div>
+                 <div class="stepper_item active">
+                    <div class="step_counter">5</div>
+                 </div>
+                 <div class="stepper_item active">
+                    <div class="step_counter">6</div>
+                 </div>
+                 <div class="stepper_item">
+                    <div class="step_counter">7</div>
+                 </div>
+            </div>
+            <!--step e-->
+
+
+             <!--info s-->
+             <div class="lease_info_list_wrap px-3"> 
+                <div class="lease_info_list bg-light rounded-3">
+                     <div class="d-flex align-items-center">
+                        <div class="flex-1 cl_dark fw-bold">
+                            사업자등록번호
+                        </div>
+                        <div class="flex-1">
+                            <span>129-80-22312</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1 cl_dark fw-bold">
+                            임대업등록번호
+                        </div>
+                        <div class="flex-1">
+                            <span>2021-서귀포시-임대사업자-0045</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--info e-->
+           
+             <!--pay s-->
+             <div class="py-3 py-3 fs-6 border mx-3 my-4 d-flex flex-column gap-3 rounded-3 "> 
+            <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                <div class="flex-2 fw-bold">사업장현황신고 신고 도움 비용</div>
+                <div class="flex-1 text-end"><span>30,000</span>원</div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                <div class="flex-2 fw-bold">
+                    <div class="d-flex">쿠폰
+                    <button type="button" class="btn btn-sm d-block-inline ms-2 btn-primary" data-bs-toggle="modal" data-bs-target="#couponModal">
+                        <span class="material-symbols-outlined me-2">
+                            sell
+                            </span>적용
+                      </button>
+                    </div>
+                </div>
+                <div class="flex-1 text-end"><span class="cl_danger">-0</span>원</div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                <div class="flex-2 fw-bold">청구금액</div>
+                <div class="flex-1 text-end"><span>30,000</span>원</div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="flex-2 fw-bold">부가가치세</div>
+                <div class="flex-1 text-end"><span>3,000</span>원</div>
+            </div> 
+           
+        </div>
+
+        <div class="py-3 py-4 fs-6 bg-light mx-3 my-4 d-flex flex-column gap-3 rounded-3  ">
+            <div class="d-flex align-items-center justify-content-between ">
+                <div class="flex-2 fw-bold">결제금액</div>
+                <div class="flex-1 fw-bold cl_primary text-end"><span>33,000</span>원</div>
+            </div>
+        </div>
+             <!--pay e-->
+            <div class="fixed_bottom d-flex  ">
+                 
+                <button type="button" class="btn btn-full flex-1  btn-primary"
+                    onclick="location.href='payment_success.html'">결제하기</button>
+            </div>
+        </div>
+        <!--content e-->
+
+
+        <!-- coupon Modal -->
+<div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="couponModalLabel">사용 가능한 쿠폰</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="px-3">
+            <div class="w-100 my-5">
+            <div class="mb-3">
+                <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+<label class="btn btn-md w-100 btn-outline-primary" for="btn-check">10,000원 신규가입 쿠폰</label>
+              </div>
+              <div class="mb-3">
+                <input type="checkbox" class="btn-check" id="btn-check2" autocomplete="off">
+<label class="btn btn-md w-100 btn-outline-primary" for="btn-check2">5,000원 추천인 가입 쿠폰</label>
+              </div> 
+            </div>
+              <div class="caption1 cl_info my-3">
+                * 쿠폰은 1회 1만원까지 사용가능합니다.
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- /coupon Modal -->
+
+
+        <!-- 임대계약정보확인 -->
+        <div class="modal fade" id="checkModal" tabindex="-1" aria-labelledby="checkModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="checkModalLabel">임대 계약 정보 확인</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div>
+
+                            <!--info s-->
+                            <div class="rent_regist_list_wrap">
+                                <div class="rent_regist_list">
+                                    <div class="subtitle3">임대주택</div>
+                                    <div class="d-flex align-items-center body2">
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">팽이하우스</span><span>201호</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rent_regist_list">
+                                    <div class="d-flex  gap-2  flex-column align-items-start body2">
+                                        <div class="position-absolute top-0 end-0">
+                                            <button type="button" class="btn btn-sm btn-outline-primary"
+                                                onclick="location.href='lease_manage_edit.html'">계약서 보기</button>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">임차인 성명 :</span><span>홍길동</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">임대기간
+                                                :</span><span>21/05-01</span>~<span>23/05/15</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">보증금 :</span><span>10,000,000</span>원
+                                            <span>(일천만원)</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">월 임대료 :</span><span>1,000,000</span>원
+                                            <span>(일백십만원)</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="rent_regist_list position-relative">
+                                    <div class="d-flex gap-2 flex-column align-items-start body2">
+                                        <div class="position-absolute top-0 end-0">
+                                            <button type="button" class="btn btn-sm btn-outline-primary"
+                                                onclick="location.href='lease_manage_edit.html'">계약서 보기</button>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">임차인 성명 :</span><span>이몽룡</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">임대기간
+                                                :</span><span>21/06-01</span>~<span>23/06/01</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">보증금 :</span><span>20,000,000</span>원
+                                            <span>(이천만원)</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="fw-bold me-2">월 임대료 :</span><span>500,000</span>원
+                                            <span>(오십만원)</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>

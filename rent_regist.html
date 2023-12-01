@@ -1,0 +1,480 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">세무서 사업자등록증</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="regist1-tab" data-bs-toggle="tab"
+                        data-bs-target="#regist1-tab-pane" type="button" role="tab" aria-controls="regist1-tab-pane"
+                        aria-selected="true">사업자정보</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="regist2-tab" data-bs-toggle="tab" data-bs-target="#regist2-tab-pane"
+                        type="button" role="tab" aria-controls="regist2-tab-pane" aria-selected="false">지자체
+                        신고임대사업자등록증</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="regist3-tab" data-bs-toggle="tab" data-bs-target="#regist3-tab-pane"
+                        type="button" role="tab" aria-controls="regist3-tab-pane" aria-selected="false">임대 계약</button>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="regist1-tab-pane" role="tabpanel"
+                    aria-labelledby="regist1-tab" tabindex="0">
+                    <form>
+                        <!--info s-->
+                        <div>
+                            <div class="rent_regist_list_wrap scrollspy-example" data-bs-spy="scroll" data-bs-offset="0"
+                                data-bs-smooth-scroll="true">
+
+
+                                <button type="button"
+                                    class="btn btn-lg d-flex align-items-center btn-outline-primarylight">
+                                    <div class="subtitle3">사업자 등록번호<span class="ms-3">129-80-22312</span></div>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-lg d-flex align-items-center btn-outline-primarylight">
+                                    <div class="subtitle3">사업자 등록번호<span class="ms-3">129-80-22312</span></div>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-lg d-flex align-items-center btn-outline-primarylight">
+                                    <div class="subtitle3">사업자 등록번호<span class="ms-3">129-80-22312</span></div>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-lg d-flex align-items-center btn-outline-primarylight">
+                                    <div class="subtitle3">사업자 등록번호<span class="ms-3">129-80-22312</span></div>
+                                </button>
+ 
+
+                                <!--button type="button" class="btn btn-lg btn-light">사업자 등록증 추가등록 +</button-->
+
+                            </div>
+
+                        </div>
+                        <!--info e-->
+                        <div class="px-3 pt-4">
+                            <div class="subtitle3 ">세무서에 신고한 주택임대업 사업자등록증 사진을 등록해주세요.</div>
+                            <div class="d-flex flex-column">
+                                <div class="mb-3 mt-4 row align-items-center">
+                                    <label for="inputnum" class="col-sm-4 col-form-label subtitle4">사업자등록번호</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control w-100 text-center" id="inputnum"
+                                            placeholder="123-67-78941">
+                                    </div>
+                                </div>
+                                <!--file upload s-->
+                                <div>
+                                    <div class="mt-3">
+                                        <div id="images" class="my-3"><span>이미지를 등록해 주세요.</span></div>
+                                        <div class="upload_thumnail_wrap">
+                                            <div class="thum" data-bs-toggle="button"><img src="img/bg/intro.jpg"></div>
+                                            <div class="thum" data-bs-toggle="button"><img src="img/bg/intro.jpg"></div>
+                                            <div class="thum">
+                                                <input type="file" id="file-input" accept="image/png, image/jpeg"
+                                                    onchange="preview()" multiple>
+                                                <button type="button" class="btn btn-lg btn-primary-light">
+                                                    <label class="cl_dark" for="file-input">
+                                                        <span class="material-symbols-outlined">upload</span>
+                                                    </label>
+                                                </button>
+                                                <p id="num-of-files" class="d-none"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--file upload e-->
+
+                            </div>
+                        </div>
+                        <div class="fixed_bottom d-flex  ">
+                            <button type="button" class="btn btn-full flex-1  btn-primary-light"
+                                onclick="location.href='building_state.html'">취소</button>
+                            <button type="button" class="btn btn-full flex-1  btn-primary"
+                                onclick="location.href='regist_confirm.html'">임대 정보 등록 완료</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="regist2-tab-pane" role="tabpanel" aria-labelledby="regist2-tab"
+                    tabindex="0">
+                    <form>
+
+                        <!--임대사업자등록증 tab s-->
+
+                        <div class="px-3 pt-3">
+                            <div class="mb-3 mt-4 row align-items-center">
+                                <label for="inputnum"
+                                    class="col-sm-12 col-form-label subtitle3 mb-3">지자체신고임대사업자등록번호</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control w-100" id="inputnum"
+                                        placeholder="2020-강남구-임대사업자-0157">
+                                </div>
+                            </div>
+                            <div class="subtitle3 pt-3"> 시청, 구청등 지자체에 신고한
+                                주택임대사업자등록증이 있으면
+                                등록해주세요.</div>
+                            <div class="d-flex flex-column">
+                                <!--file upload s-->
+                                <div>
+                                    <div class="panel">
+                                        <div class="button_outer">
+                                            <button type="button" class="btn btn-lg btn-primary-light btn_upload">
+                                                <input type="file" id="upload_file2" name="">
+                                                <span class="material-symbols-outlined">upload</span>
+                                            </button>
+                                            <div class="processing_bar"></div>
+                                            <div class="success_box"></div>
+                                        </div>
+                                    </div>
+                                    <div class="error_msg"></div>
+                                    <div class="uploaded_file_view" id="uploaded_view">
+                                        <span class="file_remove material-symbols-outlined">close</span>
+                                    </div>
+                                </div>
+                                <!--file upload e-->
+                            </div>
+                        </div>
+                        <div class="fixed_bottom d-flex  ">
+                            <button type="button" class="btn btn-full flex-1  btn-primary-light"
+                                onclick="location.href='building_state.html'">취소</button>
+                            <button type="button" class="btn btn-full flex-1  btn-primary"
+                                onclick="location.href='regist_confirm.html'">임대 정보 등록 완료</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="regist3-tab-pane" role="tabpanel" aria-labelledby="regist3-tab"
+                    tabindex="0">
+                    <form>
+
+                        <!--임대 계약 tab s-->
+
+                        <div class="subtitle3 px-3 pt-3">등록된 임대 주택 목록</div>
+                        <!--info s-->
+                        <div>
+                            <div class="rent_regist_list_wrap scrollspy-example mh-310" data-bs-spy="scroll"
+                                data-bs-offset="0" data-bs-smooth-scroll="true">
+
+                                <button type="button"
+                                    class="btn btn-outline-primarylight d-flex justify-content-start text-start flex-column py-3"
+                                    data-bs-toggle="modal" data-bs-target="#regist_popup">
+                                    <div class="subtitle3">팽이하우스</div>
+                                    <div>101 호</div>
+                                </button>
+
+                                <button type="button"
+                                    class="btn btn-outline-primarylight d-flex justify-content-start text-start flex-column py-3"
+                                    data-bs-toggle="modal" data-bs-target="#regist_popup">
+                                    <div class="subtitle3">팽이하우스</div>
+                                    <div>101 호</div>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-outline-primarylight d-flex justify-content-start text-start flex-column py-3"
+                                    data-bs-toggle="modal" data-bs-target="#regist_popup">
+                                    <div class="subtitle3">팽이하우스</div>
+                                    <div>201 호</div>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-outline-primarylight d-flex justify-content-start text-start flex-column py-3"
+                                    data-bs-toggle="modal" data-bs-target="#regist_popup">
+                                    <div class="subtitle3">팽이하우스</div>
+                                    <div>201 호</div>
+                                </button>
+
+
+                                <!--button type="button" class="btn btn-lg btn-light">사업자 등록증 추가등록 +</button-->
+
+                            </div>
+
+                        </div>
+                        <!--info e-->
+                        <div class="px-3 pt-4">
+                            <div class="subtitle3 ">렌택스에 등록되지 않은 임대 계약서가 있으면 등록해주세요.</div>
+
+                            <!--file upload s-->
+                            <div>
+                                <div class="panel">
+                                    <button type="button" class="btn btn-lg w-100 btn-primary-light"
+                                        onclick="location.href='contract2-1.html'">
+                                        임대 계약서 등록
+                                    </button>
+
+                                </div>
+                            </div>
+                            <!--file upload e-->
+                        </div>
+
+                        <div class="fixed_bottom d-flex  ">
+                            <button type="button" class="btn btn-full flex-1  btn-primary-light"
+                                onclick="location.href='building_state.html'">취소</button>
+                            <button type="button" class="btn btn-full flex-1  btn-primary"
+                                onclick="location.href='regist_confirm.html'">임대 정보 등록 완료</button>
+                        </div>
+
+
+
+                    </form>
+
+
+                    <!--임대계약 팝업  modal s-->
+                    <div class="modal fade" id="regist_popup" tabindex="-1" aria-labelledby="regist_popupLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body px-3"> 
+ 
+                                    <div class="rent_regist_list mt-3">
+                                        <div class="bg-primary py-3 px-3 rounded-2" >
+                                        <div class="subtitle3 cl_white">역삼래미안그레이튼1단지</div>
+                                        <div class="d-flex align-items-center body2 cl_white">
+                                            <div class="flex-1">
+                                                <span class="me-2">103동</span><span>201호</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="border-bottom pb-3">
+                                            <div class="d-flex flex-wrap">
+                                                <ul class="word_wrap">
+                                                    <li>홍길동</li>
+                                                    <li><span>10,000,000</span>원</li>
+                                                    <li><span>1,000,000</span>원</li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="subtitle3">임대 계약기간</div>
+                                                <div class="text-end">21/05/01<span class="mx-2">~</span>23/05/01</div>
+                                            </div>
+                                            <button type="button" class="btn btn-md btn-outline-primary w-100 mt-3"
+                                                data-bs-dismiss="modal">계약서 보기</button>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex flex-wrap">
+                                                <ul class="word_wrap">
+                                                    <li>이몽룡</li>
+                                                    <li><span>10,000,000</span>원</li>
+                                                    <li><span>1,000,000</span>원</li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="subtitle3">임대 계약기간</div>
+                                                <div class="text-end">21/05/01<span class="mx-2">~</span>23/12/31</div>
+                                            </div>
+                                            <button type="button" class="btn btn-md btn-outline-primary w-100 mt-3"
+                                                data-bs-dismiss="modal">계약서 보기</button>
+                                        </div>
+                                    </div> 
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-md btn-primary"
+                                        data-bs-dismiss="modal">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--임대계약 팝업  modal e-->
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    <!--content e-->
+
+    <!--사업자등록증 등록 안내  modal s-->
+    <div class="modal fade" id="false_notice" tabindex="-1" aria-labelledby="scheduleLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">사업자등록증 등록 안내 </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-3">
+                    등록된 사업자등록증 사진이 없습니다.<br>사업자등록증 사진을 등록해주세요.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-md  btn-primary" data-bs-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--사업자등록증 등록 안내  modal e-->
+
+
+    <!--사업자등록증 사진 삭제  modal s-->
+    <div class="modal fade" id="delete_modal" tabindex="-1" aria-labelledby="delete_modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">사업자등록증 사진 삭제</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-3">
+                    사업자등록증 사진을 삭제합니다.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-md  btn-primary" data-bs-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--사업자등록증 사진 삭제 modal e-->
+
+
+    <!--지자체신고 등록 안내  modal s-->
+    <div class="modal fade" id="false_notice2" tabindex="-1" aria-labelledby="scheduleLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">지자체신고 임대사업자등록증 등록안내 </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-3">
+                    지자체에 신고한 주택임대사업자등록증이 있으면 사진을 등록해 주세요.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-md  btn-primary" data-bs-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--지자체신고 등록 안내  modal e-->
+
+
+    <script>
+        $(function () {
+    
+            if (location.hash == "#regist3-tab") {
+                $('.nav-tabs').find('button').eq(3).addClass('active').siblings().removeClass();
+                $('.nav-tabs').find('#regist1-tab').removeClass('active'); 
+                $('.nav-tabs').find('#regist3-tab').addClass('active'); 
+                $('.tab-content').find('#regist3-tab-pane').addClass('show active').siblings().removeClass('active in');
+    
+            }   
+        })
+    </script>
+
+
+
+    <script>
+        $(function () {
+
+            if (location.hash == "#info-tab") {
+                $('.nav-tabs').find('button').eq(0).addClass('active').siblings().removeClass();
+                $('.tab-content').find('#info-tab-pane').addClass('show active').siblings().removeClass('active in');
+
+            } else if (location.hash == "#paper-tab") {
+
+                $('.nav-tabs').find('button').eq(1).addClass('active').siblings().removeClass();
+                $('.nav-tabs').find('#info-tab').removeClass('active');
+                $('.tab-content').find('#paper-tab-pane').addClass('show active').siblings().removeClass('active in');
+
+            } else if (location.hash == "#contract-tab") {
+
+                $('.nav-tabs').find('button').eq(2).addClass('active').siblings().removeClass();
+                $('.nav-tabs').find('#info-tab').removeClass('active');
+                $('.tab-content').find('#contract-tab-pane').addClass('show active').siblings().removeClass('active in');
+
+            }
+        })
+    </script>
+    <script>
+        $(function () {
+            $("#false_notice").modal("show");
+        });
+    </script>
+
+
+    <!-- calendarmodal s-->
+    <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- calendarmodal e-->
+    <script>
+        let fileInput = document.getElementById("file-input");
+        let imageContainer = document.getElementById("images");
+        let numOfFiles = document.getElementById("num-of-files");
+
+        function preview() {
+            imageContainer.innerHTML = "";
+            numOfFiles.textContent = `${fileInput.files.length} 개의 파일이 등록되었습니다.`;
+
+            for (i of fileInput.files) {
+                let reader = new FileReader();
+                let figure = document.createElement("figure");
+                let figCap = document.createElement("figcaption");
+                figCap.innerText = i.name;
+                figure.appendChild(figCap);
+                reader.onload = () => {
+                    let img = document.createElement("img");
+                    img.setAttribute("src", reader.result);
+                    figure.insertBefore(img, figCap);
+                }
+                imageContainer.appendChild(figure);
+                reader.readAsDataURL(i);
+            }
+        }
+    </script>
+    <?
+    include("include/footer.php");
+    ?>
+</body>
+
+
+</html>
