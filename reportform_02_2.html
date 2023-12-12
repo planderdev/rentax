@@ -38,34 +38,34 @@ include("include/head.php");
         <div class="container pb-9">
 
 
-           <!--step s-->
-           <div class="stepper_wrapper">
-            <div class="stepper_item active">
-                <div class="step_counter">1</div>
-             </div>
-            <div class="stepper_item active">
-                <div class="step_counter">2</div>
-             </div>
-            <div class="stepper_item">
-                <div class="step_counter">3</div>
-             </div>
-            <div class="stepper_item">
-                <div class="step_counter">4</div>
-             </div>
-             <div class="stepper_item">
-                <div class="step_counter">5</div>
-             </div>
-             <div class="stepper_item">
-                <div class="step_counter">6</div>
-             </div>
-             <div class="stepper_item">
-                <div class="step_counter">7</div>
-             </div>
-        </div>
-        <!--step e-->
+            <!--step s-->
+            <div class="stepper_wrapper">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">2</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">3</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">4</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">5</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">6</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">7</div>
+                </div>
+            </div>
+            <!--step e-->
 
             <div class="d-flex flex-column px-3">
-                 
+
                 <div class="cl_info my-3">
                     <ul>
                         <li>회원이 단독명의로 소유하고 있고, 임대소득이 없는 주택의 숫자를 등록합니다.</li>
@@ -78,7 +78,8 @@ include("include/head.php");
                         <div class="subtitle4 d-flex align-items-center gap-3">
                             임대하지 않는 주택은
                             <div class="input-group w-30 align-items-center ">
-                                <input type="number" class="form-control" id="formitem_00" placeholder="" value="1" readonly>
+                                <input type="number" class="form-control" id="formitem_00" placeholder="" value="1"
+                                    readonly>
                                 <span>채</span>
                             </div>
                             입니다.
@@ -87,109 +88,86 @@ include("include/head.php");
 
                     <div class="accordion my-4 " id="info_accordion">
                         <div class="accordion-item border-0 bg-light">
-                          <h2 class="accordion-header " id="panelsStayOpen-headingOne">
-                            <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                                단독명의 임대 하지 않는 주택 해설
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  " aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body bg-transparent">
-                                <div class="num_list px-3 pb-3">
-                             <ul>
-                                <li>
-                                    주택임대소득은 보유 주택수에 따라 과세 범위가 달라집니다.
-                                </li>
-                                <li>
-                                    소득세법에서 말하는 주택수는 임대사업하는 주택외에도 부부가 소유하고 있는 모든 주택을 포함합니다.
-                                </li>
-                                <li>
-                                    다가구 주택은 1개의 주택으로 봅니다.
-                                </li> 
-                                <li>
-                                    임대사업을 하는 주택인데 임차인이 없어서 공실인 주택도 주택수에 포함됩니다.
-                                </li>
-                                <li>
-                                    직접 거주하거나 가족이 사용하는 주택의 경우도 주택수에 포함합니다.
-                                </li>
-                                <li>
-                                    구체적인 세법은 좌측 상단의 문의를 통해 확인할수 있습니다.
-                                </li>
-                             </ul>
+                            <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                                <button class="accordion-button collapsed bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                    단독명의 임대 하지 않는 주택 해설
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  "
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body bg-transparent">
+                                    <div class="num_list px-3 pb-3">
+                                        <ul>
+                                            <li>
+                                                주택임대소득은 보유 주택수에 따라 과세 범위가 달라집니다.
+                                            </li>
+                                            <li>
+                                                소득세법에서 말하는 주택수는 임대사업하는 주택외에도 부부가 소유하고 있는 모든 주택을 포함합니다.
+                                            </li>
+                                            <li>
+                                                다가구 주택은 1개의 주택으로 봅니다.
+                                            </li>
+                                            <li>
+                                                임대사업을 하는 주택인데 임차인이 없어서 공실인 주택도 주택수에 포함됩니다.
+                                            </li>
+                                            <li>
+                                                직접 거주하거나 가족이 사용하는 주택의 경우도 주택수에 포함합니다.
+                                            </li>
+                                            <li>
+                                                구체적인 세법은 오른쪽 문의 버튼을 눌러서 확인해 주세요.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                          </div>
-                        </div> 
-                      
-                      </div>
+                        </div>
+
+                    </div>
 
 
-                    <div class="border rounded-2 px-3 mt-4">  
-                        <div class="d-flex flex-column my-3 gap-3">   
+                    <div class="border rounded-2 px-3 mt-4">
+                        <div class="d-flex flex-column my-3 gap-3">
                             <div
                                 class="d-flex justify-content-between align-items-center gap-4 flex-1 border-bottom pb-3">
                                 <label for="formitem_02" class="form-label subtitle3 w-60 mb-0">직접 거주하는 주택</label>
-                                <div class="input-group w-30 align-items-center ">
-                                    <select class="form-select form-select-lg" aria-label="Default select example">
-                                        <option selected>0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option> 
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                      </select>
-                                    <span>채</span>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <span class="input-number-decrement">–</span>
+                                    <input class="input-number" type="text" value="0" min="0" max="99">
+                                        <span class="input-number-increment">+</span> 
+                                    <span class="ms-2">채</span>
                                 </div>
                             </div>
-
+                            
                             <div
                                 class="d-flex justify-content-between align-items-center gap-4 flex-1 border-bottom pb-3">
                                 <label for="formitem_03" class="form-label subtitle3 w-60 mb-0">임대하지 않는 주택</label>
-                                <div class="input-group w-30 align-items-center ">
-                                    <select class="form-select form-select-lg" aria-label="Default select example">
-                                        <option selected>0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option> 
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                      </select>
-                                    <span>채</span>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <span class="input-number-decrement">–</span>
+                                    <input class="input-number" type="text" value="0" min="0" max="99">
+                                        <span class="input-number-increment">+</span> 
+                                    <span class="ms-2">채</span>
                                 </div>
-                            </div> 
-                            <div
-                            class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0">
-                            <label for="formitem_03" class="form-label subtitle3 mb-0 w-60">작년에 임차인이 없었던 임대주택</label>
-                            <div class="input-group w-30 align-items-center ">
-                                <select class="form-select form-select-lg" aria-label="Default select example">
-                                    <option selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option> 
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                  </select>
-                                <span>채</span>
                             </div>
-                        </div> 
-                        </div> 
+                            <div class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0">
+                                <label for="formitem_03" class="form-label subtitle3 mb-0 w-60">작년에 임차인이 없었던
+                                    임대주택</label>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <span class="input-number-decrement">–</span>
+                                        <input class="input-number" type="text" value="0" min="0" max="99">
+                                            <span class="input-number-increment">+</span> 
+                                        <span class="ms-2">채</span>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
-                
+                <div class="fixed_help_wrap">
+                    <div class="fixed_help">
+                        문의
+                    </div>
+                </div>
                 <div class="pb-8"></div>
                 <div class="fixed_bottom full d-flex">
                     <button type="button" class="btn btn-lg flex-1 btn-primary"
