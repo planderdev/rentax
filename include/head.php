@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.min.js"></script>
@@ -26,7 +27,7 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/basic.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script> 
-
+ 
     <script>
         $(function(){
           var includes1 = $('[data-include1="header"]');

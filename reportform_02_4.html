@@ -1,0 +1,350 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">부부 합산 보유 주택 수</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container pb-9"> 
+
+            <!--step s-->
+           <div class="stepper_wrapper">
+            <div class="stepper_item active">
+                <div class="step_counter">1</div>
+             </div>
+            <div class="stepper_item active">
+                <div class="step_counter">2</div>
+             </div>
+            <div class="stepper_item active">
+                <div class="step_counter">3</div>
+             </div>
+            <div class="stepper_item">
+                <div class="step_counter">4</div>
+             </div>
+             <div class="stepper_item">
+                <div class="step_counter">5</div>
+             </div>
+             <div class="stepper_item">
+                <div class="step_counter">6</div>
+             </div>
+             <div class="stepper_item">
+                <div class="step_counter">7</div>
+             </div>
+        </div>
+        <!--step e-->
+
+            <div class="d-flex flex-column px-3"> 
+                <form> 
+                    <div class="py-3 bg-primary-lightest mt-4 mb-2 rounded-2">
+                        <div class="body2 d-flex align-items-center justify-content-between gap-3 ">
+                            부부합산 보유 주택 수
+                            <div>
+                                <span class="fw-bold">4</span>
+                                <span>채</span>
+                            </div>
+                        </div>
+                        <div class="body2 d-flex align-items-center justify-content-between gap-3">
+                            월세 소득 과세 대상 주택 수
+                            <div>
+                                <span class="fw-bold">2</span>
+                                <span>채</span>
+                            </div>
+                        </div>
+                        <div class="body2 d-flex align-items-center justify-content-between gap-3">
+                            보증금 과세 대상 주택 수
+                            <div>
+                                <span class="fw-bold">2</span>
+                                <span>채</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion my-4 " id="info_accordion">
+                        <div class="accordion-item border-0 bg-light">
+                          <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                            <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                과세 대상 주택 수 해설
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  " aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body bg-transparent">
+                                <div class="num_list px-3 pb-3">
+                             <ul>
+                                <li>
+                                    임대사업을 하는 주택뿐만 아니라 임대사업을 하지 않는 주택도 주택 수에 포함됩니다.
+                                </li>
+                                <li>
+                                    보유 주택 수와 보유 주택 규모에 따라 월세 또는 보증금이 과세 대상이 결정됩니다.
+                                </li>
+                                <li>
+                                    구체적인 세법은 오른쪽 문의 버튼을 눌러서 확인해 주세요.
+                                </li>
+                             </ul>
+                            </div>
+                            </div>
+                          </div>
+                        </div> 
+                      
+                      </div>
+
+
+                    <div class="building_manage_wrap d-none px-0">
+                        <!---임대계약 default s-->
+                        <div class="building_manage bg-success-light px-0 py-0">
+                            <div class="accordion bg-transparent" id="state_default">
+                                <div class="accordion-item border-0 bg-transparent">
+                                    <h2 class="accordion-header" id="state_default_head">
+                                        <button class="accordion-button bg-transparent" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#state_default_body"
+                                            aria-expanded="true" aria-controls="state_default_body">
+                                            <div class="list_style_c mb-0">
+                                                <div class="list_item_wrap">
+                                                    <div class="list_item">
+                                                        <div class="title">사업자 등록번호</div>
+                                                        <div class="sub">129-58-54841</div>
+                                                    </div>
+                                                    <div class="list_item">
+                                                        <div class="title">임대업 등록번호</div>
+                                                        <div class="sub">2020-서귀포시-임대사업자-0045</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="state_default_body" class="accordion-collapse collapse show"
+                                        aria-labelledby="state_default_head" data-bs-parent="#state_default">
+                                        <div class="accordion-body bg-transparent">
+                                            <!---임대계약서 리스트-->
+                                            <div class="d-flex gap-3 flex-column pb-4 py-3">
+                                                <div class="building_item" onclick="location.href='building_info.html'">
+                                                    <div class="subtitle2 mb-1">팽이하우스</div>
+                                                    <div class="body2 cl_description"><span>101호</span></div>
+                                                    <span
+                                                        class="badge position-absolute top-50 end-2 translate-middle-y lh-12 text-bg-success">확인완료</span>
+                                                </div>
+                                                <div class="building_item" data-bs-toggle="modal"
+                                                    data-bs-target="#checkModal">
+                                                    <div class="subtitle2 mb-1">팽이하우스</div>
+                                                    <div class="body2 cl_description"><span>201호</span></div>
+                                                    <span
+                                                        class="badge position-absolute top-50 end-2 translate-middle-y lh-12 text-bg-warning">확인완료</span>
+                                                </div>
+                                            </div>
+                                            <!---임대계약서 리스트-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--button type="button" class="btn btn-dark btn-icon-right w-100 btn-lg"
+                               onclick="location.href='contract2.html'">임대계약서 추가<span
+                                   class="material-symbols-outlined">add</span></button-->
+                        </div>
+                        <!---임대계약 default e-->
+                        <!---임대계약 success s-->
+                        <div class="building_manage bg-success-light px-0 py-0">
+                            <div class="accordion bg-transparent" id="state_success">
+                                <div class="accordion-item border-0 bg-transparent">
+                                    <h2 class="accordion-header" id="state_success_head">
+                                        <button class="accordion-button bg-transparent" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#state_success_body"
+                                            aria-expanded="true" aria-controls="state_success_body">
+                                            <div class="list_style_c mb-0">
+                                                <div class="list_item_wrap">
+                                                    <div class="list_item">
+                                                        <div class="title">사업자 등록번호</div>
+                                                        <div class="sub">129-58-54841</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="state_success_body" class="accordion-collapse collapse show"
+                                        aria-labelledby="state_success_head" data-bs-parent="#state_success">
+                                        <div class="accordion-body bg-transparent">
+                                            <!---임대계약서 리스트-->
+                                            <div class="d-flex gap-3 flex-column pb-4 py-3">
+                                                <div class="building_item" onclick="location.href='building_info.html'">
+                                                    <div class="subtitle2 mb-1">역삼래미안그래이튼1단지</div>
+                                                    <div class="body2 cl_description"><span>103동</span><span>101호</span>
+                                                    </div>
+                                                    <span
+                                                        class="badge position-absolute top-50 end-2 translate-middle-y lh-12 text-bg-success">확인완료</span>
+                                                </div>
+
+                                            </div>
+                                            <!---임대계약서 리스트-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--button type="button" class="btn btn-dark btn-icon-right w-100 btn-lg"
+                               onclick="location.href='contract2.html'">임대계약서 추가<span
+                                   class="material-symbols-outlined">add</span></button-->
+                        </div>
+                        <!---임대계약 success e-->
+
+
+                    </div> 
+                    <section class="pb-7">
+                        <div class="subtitle1">
+                            임대소득이 있는 주택
+                        </div>
+                        <div class="border rounded-2 px-3 mt-4"> 
+                            <div class="d-flex flex-column my-3 gap-3">  
+                                <div class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0 pb-0">
+                                    <label for="formitem_02" class="form-label subtitle3 mb-0 flex-1">임대소득이 있는<br>임대 주택</label>
+                                    <div class="input-group w-40 align-items-center flex-1">
+                                        <input type="number" class="onlyread form-control" id="formitem_02" placeholder="" value="2" readonly>
+                                        <span>채 입니다.</span>
+                                    </div>
+                                 </div> 
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="pb-8">
+                    <div class="subtitle1">
+                        임대소득이 없는 주택
+                    </div>
+                    <div class="border rounded-2 px-3 mt-4"> 
+                        <div class="d-flex flex-column my-3 gap-3">  
+                            <!--div class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0 pb-0">
+                                <label for="formitem_02" class="form-label subtitle3 mb-0 flex-1">공동명의이며 대표인 주택</label>
+                                <div class="input-group w-30 align-items-center flex-1">
+                                    <input type="number" class="onlyread form-control" id="formitem_02" placeholder="" value="2" readonly>
+                                    <span>채</span>
+                                </div>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editmodal">수정하기</button>
+                            </div-->
+                            <div class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0 pb-0">
+                                <label for="formitem_02" class="form-label subtitle3 mb-0 flex-1">임대하지 않는 주택</label>
+                                <div class="input-group   align-items-center flex-1">
+                                    <input type="number" class="form-control" id="formitem_02" placeholder="" value="1" readonly>
+                                    <span>채</span>
+                                </div>
+                                <!--button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editmodal">수정하기</button-->
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0 pb-0">
+                                <label for="formitem_02" class="form-label subtitle3 mb-0 flex-1">배우자 소유 주택</label>
+                                <div class="input-group  align-items-center flex-1">
+                                    <input type="number" class="form-control" id="formitem_02" placeholder="" value="1" readonly>
+                                    <span>채</span>
+                                </div>
+                                <!--button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editmodal">수정하기</button-->
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                </form>
+                <div class="fixed_help_wrap">
+                    <div class="fixed_help">
+                        문의
+                    </div>
+                </div>
+                <div class="fixed_bottom full d-flex">
+                    <button type="button" class="btn btn-lg flex-1 btn-primary-light"
+                    onclick="location.href='reportform_02_3.html'">이전</button>
+                    <button type="button" class="btn btn-lg flex-1 btn-primary"
+                        onclick="location.href='business_report.html'">다음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content e-->
+
+
+    <!-- show modal -->
+<div class="modal fade" id="showmodal" tabindex="-1" aria-labelledby="showmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="showmodalLabel">알림</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="px-3 text-center">
+            <img src="img/CK_td02480000022_l.jpg" class="w-40" data-aos="fade-up">
+            <p class="body1 mb-3"><strong>부부합산 보유 주택의 수</strong>를 확인해주세요.<br>주택 수가 틀리면 수정해주세요.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- edit modal -->
+<div class="modal fade" id="editmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editmodalLabel">수정하기</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="px-3 py-4 body1 d-flex align-items-center justify-content-between" >
+            공동명의이며, 대표인 주택 
+            <div class="input-group align-items-center  w-30">
+                <input type="number" class="form-control" id="formitem_0" placeholder="" value="">
+                <span>채</span>
+            </div> 
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">수정하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function() {
+        $("#showmodal").modal("show");
+    });
+    </script>
+    <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>

@@ -1,28 +1,5 @@
 
 
-<!--bottom modal s-->
-<div class="modal fade d-none" id="myModal" tabindex="-1" aria-labelledby="알림팝업" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-bottom">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">세무 일정 알림</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="px-3">
-        <span class="material-symbols-outlined">brightness_alert</span>
-        <p><strong>사업장현황신고 기간입니다.</strong></p>
-        <p>2월 10일까지 주택임대소득에 대한<br>사업장현황신고를 해주세요.</p>
-  </div> 
-      </div>
-      <!--div class="modal-footer">
-      <button type="button" class="btn btn-tranparent cl_info" id="modal-today-close">오늘 하루 보지 않기</button>
-        <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">확인</button>
-       </div-->
-    </div>
-  </div>
-</div>
-<!--bottom modal e-->
 
 <!-- alarm modal s-->
  <div class="modal fade" id="alarmmodal" tabindex="-1" aria-labelledby="alarmmodalLabel" aria-hidden="true">
@@ -64,9 +41,9 @@
         </div>
         </div>
         </div>
-        <!--div class="modal-footer bg-primary-lightest border-0">
+        <div class="modal-footer bg-primary-lightest border-0">
           <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">닫기</button>
-         </div-->
+         </div>
       </div>
     </div>
   </div>
@@ -141,6 +118,63 @@
 </div>
 <!--wrap e--> 
 
+<script>
+	window.onload = function(){
+		$('.loading').css('display','none') //로딩 객체 제거
+		$('body').removeClass('scrollLock') //스크롤 락 제거
+	}
+</script>
+
+<script>
+                                (function () {
+
+                                    window.inputNumber = function (el) {
+
+                                        var min = el.attr('min') || false;
+                                        var max = el.attr('max') || false;
+
+                                        var els = {};
+
+                                        els.dec = el.prev();
+                                        els.inc = el.next();
+
+                                        el.each(function () {
+                                            init($(this));
+                                        });
+
+                                        function init(el) {
+
+                                            els.dec.on('click', decrement);
+                                            els.inc.on('click', increment);
+
+                                            function decrement() {
+                                                var value = el[0].value;
+                                                value--;
+                                                if (!min || value >= min) {
+                                                    el[0].value = value;
+                                                }
+                                            }
+
+                                            function increment() {
+                                                var value = el[0].value;
+                                                value++;
+                                                if (!max || value <= max) {
+                                                    el[0].value = value++;
+                                                }
+                                            }
+                                        }
+                                    }
+                                })();
+
+                                inputNumber($('.input-number'));
+                            </script>
+
+                            
+<script>
+    $(function() {
+        $("#popupModal").modal("show");
+    });
+    </script>
  
 <script type="text/javascript">
     function comma(str) {
@@ -166,7 +200,36 @@
 	    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g,'$1');
 	}
 </script>
- 
+<script>
+    var btnUpload = $("#upload_file"),
+		btnOuter = $(".button_outer");
+	btnUpload.on("change", function(e){
+		var ext = btnUpload.val().split('.').pop().toLowerCase();
+		if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+			$(".error_msg").text("이미지 형식이 아닙니다.");
+		} else {
+			$(".error_msg").text("");
+			btnOuter.addClass("file_uploading");
+			setTimeout(function(){
+				btnOuter.addClass("file_uploaded");
+			},3000);
+			var uploadedFile = URL.createObjectURL(e.target.files[0]);
+			setTimeout(function(){
+				$("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
+			},3500);
+		}
+	});
+	$(".file_remove").on("click", function(e){
+		$("#uploaded_view").removeClass("show");
+		$("#uploaded_view").find("img").remove();
+		btnOuter.removeClass("file_uploading");
+		btnOuter.removeClass("file_uploaded");
+	});
+    
+
+    
+    </script>
+
 <script>
  AOS.init(); 
 </script> 
