@@ -1,0 +1,137 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대주택현황확인</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container pb-9">
+
+
+            <!--step s-->
+            <div class="stepper_wrapper">
+                <div class="stepper_item completed">
+                    <div class="step_counter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6402 8.2318C17.0645 8.58537 17.1218 9.21593 16.7682 9.64021L11.9435 15.4299C11.4729 15.9946 10.6191 16.0333 10.0993 15.5136L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929C7.68342 10.9024 8.31658 10.9024 8.70711 11.2929L10.9328 13.5186L15.2318 8.35984C15.5853 7.93556 16.2159 7.87824 16.6402 8.2318Z"/>
+                          </svg>
+                    </div>
+                    <div class="step_name">부부<br>공동명의</div>
+                </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">2</div>
+                    <div class="step_name">미임대<br>주택</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">3</div>
+                    <div class="step_name">배우자단독<br>소유주택</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">4</div>
+                    <div class="step_name">보유 주택 수<br>확인</div>
+                </div>
+            </div>
+            <!--step e-->
+
+            <div class="d-flex flex-column px-3 vh-100">
+                <div class="mt-5 subtitle1">
+                    임대 하지 않는 주택
+                </div>
+                <div class="cl_info my-3">
+                    <ul>
+                        <li>주택은 주거용 오피스텔도 포함합니다.</li>
+                        <li>본인이 단독으로 소유하고 있지만 임대 하지 않는 주택의 숫자를 등록합니다.</li>
+                    </ul>
+                </div>
+                <form>
+
+                    <div class="py-3 bg-primary-lightest mt-2 mb-2 rounded-2">
+                        <div class="subtitle4 d-flex align-items-center gap-3">
+                            임대하지 않는 주택은
+                            <div class="input-group w-30 align-items-center ">
+                                <input type="number" class="form-control" id="formitem_00" placeholder="" value="2">
+                                <span>채</span>
+                            </div>
+                            입니다.
+                        </div>
+                    </div>
+                    <div class="border rounded-2 px-3 mt-4"> 
+
+                        <div class="d-flex flex-column my-3 gap-3"> 
+                            
+
+                            <div
+                                class="d-flex justify-content-between align-items-center gap-4 flex-1 border-bottom pb-3">
+                                <label for="formitem_02" class="form-label subtitle3 mb-0">직접 거주하는 주택</label>
+                                <div class="input-group w-30 align-items-center ">
+                                    <input type="number" class="form-control" id="formitem_02" placeholder="" value="0">
+                                    <span>채</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0">
+                                <label for="formitem_03" class="form-label subtitle3 mb-0">임대하지 않는 주택</label>
+                                <div class="input-group w-30 align-items-center ">
+                                    <input type="number" class="form-control" id="formitem_03" placeholder="" value="0">
+                                    <span>채</span>
+                                </div>
+                            </div> 
+ 
+                        </div> 
+                    </div>
+                </form>
+                <div class="info_box mt-4">
+                    <ul>
+                        <li>구체적인 세법은 좌측 상단의 문의를 통해 확인할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="fixed_bottom full d-flex">
+                    <button type="button" class="btn btn-lg flex-1 btn-primary"
+                        onclick="location.href='reportform_02_3.html'">다음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content e-->
+
+
+
+    <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>

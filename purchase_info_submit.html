@@ -1,0 +1,218 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">매입 종이세금게산서 등록</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!--step s-->
+            <div class="stepper_wrapper">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                    <!--div class="step_name">임대 계약</div-->
+                </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">2</div>
+                    <!--div class="step_name">매출 정보</div-->
+                </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">3</div>
+                    <div class="step_name">매입 정보</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">4</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">5</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">6</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">7</div>
+                </div>
+            </div>
+            <!--step e-->
+
+            <div class="px-3">
+
+                <!--사업자-->
+                <div class="business_manage business_card">
+                    <div class="list_style_c">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub">132-77-15487</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">사업종류</div>
+                                <div class="sub">제주 빌딩</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---/사업자-->
+                <div class="info_box_outline my-3">
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="material-symbols-outlined">
+                            info
+                        </span>
+                        <div>
+                            매입 세금계산서에서 상호, 매수, 공급가액을 등록해주세요.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="needs-validation" novalidate>
+                <div class="lease_info_list_wrap mt-0">
+                    <!--임대계약 소재지 s-->
+                    <div class="lease_info_list border-0 gap-3">
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                상호
+                            </div>
+                            <div class="flex-2">
+                                <div class="input-group has-validation align-items-center ">
+                                    <input type="text" class="form-control" id="add1" value="제주 건물관리"
+                                        aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-tooltip">
+                                        필수 입력 항목입니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <div class="flex-1  fw-bold">
+                                매수
+                            </div>
+                            <div class="flex-2">
+                                <div class="input-group has-validation align-items-center ">
+                                    <input type="text" class="form-control" id="add2"
+                                        aria-describedby="inputGroupPrepend" value="6" required>
+                                    <span>장</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_box_outline">
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="material-symbols-outlined">
+                                    info
+                                </span>
+                                <div>
+                                    동일한 금액의 세금계산서가 여러장이면 매수를 등록해주세요. 거래처가 동일해도 금액이 다르면 따로 등록해주세요.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1  fw-bold">
+                                공급가액
+                            </div>
+                            <div class="flex-2">
+                                <div class="input-group  has-validation align-items-center ">
+                                    <input type="text" class="form-control" id="add3"
+                                        aria-describedby="inputGroupPrepend" value="1,800,000" required>
+                                    <span>원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_box_outline">
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="material-symbols-outlined">
+                                    info
+                                </span>
+                                <div>
+                                    거래처에 지급한 금액 전체를 등록해주세요.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                세액
+                            </div>
+                            <div class="flex-2 text-end">
+                                <span>1,800,000</span>원
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1  fw-bold cl_dark">
+                                합계
+                            </div>
+                            <div class="flex-2 text-end fw-bold cl_dark">
+                                <span>1,980,000</span>원
+                            </div>
+                        </div>
+                    </div>
+                    <!--임대계약 소재지 e-->
+
+
+                    <!--임대계약 면적 e-->
+                    <div class="fixed_bottom full d-flex z-index-2">
+                        <button type="button" class="btn btn-lg w-100 btn-primary"
+                            onclick="location.href='purchase_info.html'">
+                            다음</button>
+                    </div>
+            </form>
+
+        </div>
+        <!--content e-->
+
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
+
+        <?
+include("include/footer.php");
+?>
+</body>
+
+</html>

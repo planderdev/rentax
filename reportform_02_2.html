@@ -1,0 +1,190 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">단독명의 임대 하지 않는 주택</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container pb-9">
+
+
+            <!--step s-->
+            <div class="stepper_wrapper">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">2</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">3</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">4</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">5</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">6</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">7</div>
+                </div>
+            </div>
+            <!--step e-->
+
+            <div class="d-flex flex-column px-3">
+
+                <div class="cl_info my-3">
+                    <ul>
+                        <li>회원이 단독명의로 소유하고 있고, 임대소득이 없는 주택의 숫자를 등록합니다.</li>
+                        <li>주거용 오피스텔도 주택에 포함합니다.</li>
+                    </ul>
+                </div>
+                <form>
+
+                    <div class="py-3 bg-primary-lightest mt-2 mb-2 rounded-2">
+                        <div class="subtitle4 d-flex align-items-center gap-3">
+                            임대하지 않는 주택은
+                            <div class="input-group w-30 align-items-center ">
+                                <input type="number" class="form-control" id="formitem_00" placeholder="" value="1"
+                                    readonly>
+                                <span>채</span>
+                            </div>
+                            입니다.
+                        </div>
+                    </div>
+
+                    <div class="accordion my-4 " id="info_accordion">
+                        <div class="accordion-item border-0 bg-light">
+                            <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                                <button class="accordion-button collapsed bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                    단독명의 임대 하지 않는 주택 해설
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  "
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body bg-transparent">
+                                    <div class="num_list px-3 pb-3">
+                                        <ul>
+                                            <li>
+                                                주택임대소득은 보유 주택수에 따라 과세 범위가 달라집니다.
+                                            </li>
+                                            <li>
+                                                소득세법에서 말하는 주택수는 임대사업하는 주택외에도 부부가 소유하고 있는 모든 주택을 포함합니다.
+                                            </li>
+                                            <li>
+                                                다가구 주택은 1개의 주택으로 봅니다.
+                                            </li>
+                                            <li>
+                                                임대사업을 하는 주택인데 임차인이 없어서 공실인 주택도 주택수에 포함됩니다.
+                                            </li>
+                                            <li>
+                                                직접 거주하거나 가족이 사용하는 주택의 경우도 주택수에 포함합니다.
+                                            </li>
+                                            <li>
+                                                구체적인 세법은 오른쪽 문의 버튼을 눌러서 확인해 주세요.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="border rounded-2 px-3 mt-4">
+                        <div class="d-flex flex-column my-3 gap-3">
+                            <div
+                                class="d-flex justify-content-between align-items-center gap-4 flex-1 border-bottom pb-3">
+                                <label for="formitem_02" class="form-label subtitle3 w-60 mb-0">직접 거주하는 주택</label>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <span class="input-number-decrement">–</span>
+                                    <input class="input-number" type="text" value="0" min="0" max="99">
+                                        <span class="input-number-increment">+</span> 
+                                    <span class="ms-2">채</span>
+                                </div>
+                            </div>
+                            
+                            <div
+                                class="d-flex justify-content-between align-items-center gap-4 flex-1 border-bottom pb-3">
+                                <label for="formitem_03" class="form-label subtitle3 w-60 mb-0">임대하지 않는 주택</label>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <span class="input-number-decrement">–</span>
+                                    <input class="input-number" type="text" value="0" min="0" max="99">
+                                        <span class="input-number-increment">+</span> 
+                                    <span class="ms-2">채</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center gap-4 flex-1 border-0">
+                                <label for="formitem_03" class="form-label subtitle3 mb-0 w-60">작년에 임차인이 없었던
+                                    임대주택</label>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <span class="input-number-decrement">–</span>
+                                        <input class="input-number" type="text" value="0" min="0" max="99">
+                                            <span class="input-number-increment">+</span> 
+                                        <span class="ms-2">채</span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="fixed_help_wrap">
+                    <div class="fixed_help">
+                        문의
+                    </div>
+                </div>
+                <div class="pb-8"></div>
+                <div class="fixed_bottom full d-flex">
+                    <button type="button" class="btn btn-lg flex-1 btn-primary"
+                        onclick="location.href='reportform_02_3.html'">다음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content e-->
+
+
+
+    <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>

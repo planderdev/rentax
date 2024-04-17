@@ -1,0 +1,230 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대 계약 목록</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button> 
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container bg-light-gray">
+            <section class="bg-white ">
+                <!--step s-->
+                <div class="stepper_wrapper ">
+                    <div class="stepper_item active">
+                        <div class="step_counter">1</div>
+                        <div class="step_name">임대 계약</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">2</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">3</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">4</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">5</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">6</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">7</div>
+                    </div>
+                </div>
+                <!--step e-->
+            </section>
+            <!--임대사업자 목록-->
+            <div class="business_manage_wrap">
+                <!---등록완료-->
+                <div class="business_manage">
+                    <div class="list_style_c">
+                        <div class="list_item_wrap">
+                            <span class="badge text-bg-success w-fit">등록 완료</span>
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub">132-77-15487</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">사업종류</div>
+                                <div class="sub">제주 빌딩</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---/등록완료-->
+                <!---임대계약정보 입력-->
+                <div class="business_manage">
+                    <div class="list_style_c">
+                        <div class="list_item_wrap">
+                            <span class="badge text-bg-dark w-fit">계약 정보 필요</span>
+                            <div class="list_item">
+                                <div class="title">임대정보</div>
+                                <div class="sub">연동 123-45 / 2층 201-203,205호</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">임차인 상호</div>
+                                <div class="sub">정석 학원</div>
+                            </div>
+                            <a href="lease_manage_info.html" class="btn btn-md btn-outline-light">임대계약 정보 <span class="material-symbols-outlined ms-2">
+                                search
+                                </span></a>
+                        </div>
+                    </div>
+                </div>
+                <!---/임대계약정보 입력-->
+                <!---임대계약사진 입력-->
+                <div class="business_manage">
+                    <div class="list_style_c">
+                        <div class="list_item_wrap">
+                            <span class="badge text-bg-dark w-fit">사진 등록 필요</span>
+                            <div class="list_item">
+                                <div class="title">임대정보</div>
+                                <div class="sub">등록 전 계약서</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">임차인 상호</div>
+                                <div class="sub">라이나 생명</div>
+                            </div>
+                            <button type="button" class="btn btn-md btn-outline-light" data-bs-toggle="modal"
+                                data-bs-target="#uploadModal">임대계약 정보 <span class="material-symbols-outlined ms-2">
+                                    search
+                                    </span></button>
+                        </div>
+                    </div>
+                </div>
+                <!---/임대계약사진 입력-->
+
+                <!--/임대사업자 목록-->
+            </div>
+            <div class="bg-white pb-8">
+                <div class="px-3 py-4">
+                    <div class="subtitle2 mb-2">
+                        임대계약서를 등록해 주세요.
+                    </div>
+                    <div class="body1 cl_description mb-3">세금신고기간안에 종료된 계약의 경우도 신고 대상이기에 종료된 계약서도 등록해주세요.</div>
+                    <button type="button" class="btn btn-lg d-flex align-items-center justify-content-center w-100 btn-primary-light"
+                        onclick="location.href='vat_list_add2.html'">임대계약서 등록 <span class="material-symbols-outlined ms-2">
+                            add_circle
+                            </span></button>
+                </div>
+            </div>
+
+            <div class="fixed_bottom full d-flex flex-column bg-white">
+                <div class="py-3 bottom-center-checkbox">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-6" for="flexCheckDefault">
+                            모든 임대 계약을 등록했습니다.
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-lg flex-1 btn-primary"
+                    onclick="location.href='sale_info.html'">계약서 등록 완료</button>
+            </div>
+
+        </div>
+        <!--content e-->
+
+        <!-- Upload Modal -->
+        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="uploadModalLabel">계약서 사진</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="d-flex flex-column px-3">
+                                <div class="mt-4">
+                                    <div id="images" class="my-3"><span>이미지를 등록해 주세요.</span></div>
+                                    <div class="upload_thumnail_wrap">
+                                        <div class="thum" data-bs-toggle="button"><img src="img/bg/intro.jpg"></div>
+                                        <div class="thum" data-bs-toggle="button"><img src="img/bg/intro.jpg"></div>
+                                        <div class="thum">
+                                            <input type="file" id="file-input" accept="image/png, image/jpeg"
+                                                onchange="preview()" multiple>
+                                            <button type="button" class="btn btn-lg btn-primary-light">
+                                                <label class="cl_dark" for="file-input">
+                                                    <span class="material-symbols-outlined">upload</span>
+                                                </label>
+                                            </button>
+                                            <p id="num-of-files" class="d-none"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fixed_bottom full d-flex">
+                                    <button type="submit" class="btn btn-lg flex-1 btn-primary"
+                                        onclick="location.href='#'">확인</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="submit" class="btn btn-primary">확인</button>
+        </div-->
+                </div>
+            </div>
+        </div>
+        <!-- /Upload Modal -->
+
+        <script>
+            let fileInput = document.getElementById("file-input");
+            let imageContainer = document.getElementById("images");
+            let numOfFiles = document.getElementById("num-of-files");
+
+            function preview() {
+                imageContainer.innerHTML = "";
+                numOfFiles.textContent = `${fileInput.files.length} 개의 파일이 등록되었습니다.`;
+
+                for (i of fileInput.files) {
+                    let reader = new FileReader();
+                    let figure = document.createElement("figure");
+                    let figCap = document.createElement("figcaption");
+                    figCap.innerText = i.name;
+                    figure.appendChild(figCap);
+                    reader.onload = () => {
+                        let img = document.createElement("img");
+                        img.setAttribute("src", reader.result);
+                        figure.insertBefore(img, figCap);
+                    }
+                    imageContainer.appendChild(figure);
+                    reader.readAsDataURL(i);
+                }
+            }
+        </script>
+</body>
+
+</html>
