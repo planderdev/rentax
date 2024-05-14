@@ -1,0 +1,180 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">부가가치세 신고 안내</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container pb-0">
+            <div class="px-3 py-4">
+                <div class="subtitle2">렌택스는 개인정보 처리방침을 준수하여 개인정보를 관리합니다.</div>
+                <!--Accordion-->
+                <div class="accordion my-4 ">
+                    <div class="accordion-item border-0 bg-primary-lightest">
+                        <h2 class="accordion-header " id="info-one">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#infocontent-one" aria-expanded="false" aria-controls="infocontent-one">
+                                정보 수집 안내
+                            </button>
+                        </h2>
+                        <div id="infocontent-one" class="accordion-collapse collapse" aria-labelledby="info-one">
+                            <div class="accordion-body bg-transparent">
+                                <div class="bar_list px-3 pb-3">
+                                    <div class="mb-2">
+                                        세금신고를 위해서 필요한 정보만을 수집하여 목적 외에는 사용하지 않으며, 정보는 안전하게 관리합니다.
+                                    </div>
+                                    <div class="mb-1 fw-bold cl_gray">제3자 정보 제공</div>
+                                    <ul>
+                                        <li>
+                                            카카오 코퍼레이션 : 간편인증
+                                        </li>
+                                        <li>
+                                            PASS : 간편인증
+                                        </li>
+                                        <li>
+                                            인포텍 : 국세청 정보 수집 및 가공
+                                        </li>
+                                        <li>
+                                            국세청 : 세금 신고
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Accordion-->
+
+                <div>
+                    <div class="subtitle2 fw-bold">1. 국세청 정보</div>
+                    <div class="body1 cl_description mt-2">국세청이 가지고 있는 세금신고를 위한 최소한의 자료를 수집합니다.</div>
+
+                </div>
+                <!--Accordion2-->
+                <div class="accordion my-4 ">
+                    <div class="accordion-item border-0 bg-primary-lightest">
+                        <h2 class="accordion-header " id="info-two">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#infocontent-two" aria-expanded="false" aria-controls="infocontent-two">
+                                국세청을 통해서 수집하는 정보는?
+                            </button>
+                        </h2>
+                        <div id="infocontent-two" class="accordion-collapse collapse" aria-labelledby="info-two">
+                            <div class="accordion-body bg-transparent">
+                                <div class="num_list px-3 pb-3">
+                                    <ul>
+                                        <li>
+                                            사업자 정보 (사업자, 거래처)
+                                        </li>
+                                        <li>
+                                            전자세금계산서 매입/매출
+                                        </li>
+                                        <li>
+                                            현금영수증 매입 / 매출
+                                        </li>
+                                        <li>
+                                            부가세예정고지세액
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Accordion2-->
+                <div>
+                    <div class="subtitle2 fw-bold">2. 임대계약 정보</div>
+                    <div class="body1 cl_description mt-2">임대계약정보를 국세청에 제출해야 합니다. 아래의 서류를 준비해주세요.</div>
+                    <div class="body1 cl_description mt-3">
+                        <p>1) 임대 계약서</p>
+                        <p>2) 종이세금계산서</p>
+                    </div>
+                </div>
+                <!--Accordion3-->
+                <div class="accordion my-4 ">
+                    <div class="accordion-item border-0 bg-primary-lightest">
+                        <h2 class="accordion-header " id="info-th">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#infocontent-th" aria-expanded="false" aria-controls="infocontent-th">
+                                부가가치세신고 대상 임대계약은?
+                            </button>
+                        </h2>
+                        <div id="infocontent-th" class="accordion-collapse collapse" aria-labelledby="info-th">
+                            <div class="accordion-body bg-transparent">
+                                <div class="num_list px-3 pb-3">
+                                    <ul>
+                                        <li>
+                                            계속 임대중인 계약
+                                        </li>
+                                        <li>
+                                            신규로 임대가 시작된 계약
+                                        </li>
+                                        <li>
+                                            과세기간동안 임대계약이 종료된 계약
+                                        </li>
+                                        <li>
+                                            과세기간동안 임대료 인상 등 임대 계약조건이 변경된 경우
+                                            <br>
+                                            - 동일한 임차인이지만 두건의 임대계약으로 신고해야 합니다.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Accordion3--> 
+            </div>
+            <div class="fixed_bottom full d-flex flex-column bg-white">
+                <div class="py-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label fs-6" for="flexCheckDefault">
+                        필수적인 개인정보 제공에 동의합니다.
+                    </label>
+                </div></div>
+                <button type="button" class="btn btn-lg w-100 btn-primary"
+                    onclick="location.href='vat2.html'">다음</button>
+            </div>
+
+        </div>
+        <!--content e-->
+        
+        <?
+include("include/footer.php");
+?>
+
+</body>
+
+
+</html>

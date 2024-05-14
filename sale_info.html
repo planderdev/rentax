@@ -36,8 +36,8 @@ include("include/head.php");
         </header>
         <!--Title Header e-->
         <!--content s-->
-        <div class="container bg-light-gray ">
-            <section class="bg-white pb-3">
+        <div class="container bg-light-gray">
+            <section class="bg-white ">
                 <!--step s-->
                 <div class="stepper_wrapper">
                     <div class="stepper_item active">
@@ -65,7 +65,7 @@ include("include/head.php");
                     </div>
                 </div>
                 <!--step e-->
-                <div class="px-3">
+                <div class="px-3 pb-3">
                     <div class="info_box_outline mb-3">
                         <ul>
                             <li>임대계약에 따른 매출 정보를 확인해 주세요.</li>
@@ -94,16 +94,54 @@ include("include/head.php");
                 <!---임대정보-->
                 <div class="business_manage">
                     <div class="list_style_c gap-3">
-                        <div class="list_item_title">연동 123-45 / 2층 201-203,205호</div>
+                        <div class="list_item_title">
+                            <div>
+                                정석 학원
+                            </div>
+                            <div>
+                                홍길동
+                            </div>
+                        </div>
                         <div class="list_item_wrap">
                             <div class="list_item">
-                                <div class="title">임차인 상호</div>
-                                <div class="sub">정석 학원</div>
+                                <div class="title">임대료</div>
+                                <div class="sub">
+                                    <div><span>1</span>개월</div>
+                                 </div>
+                                <div class="sub"> 
+                                    <div><span>1,500,000</span>원</div>
+                                </div>
                             </div>
+                            <a href="sale_info_detail.html" class="btn btn-md btn-warning">매출 상세정보 확인하기 <span
+                                    class="material-symbols-outlined ms-2">
+                                    search
+                                </span></a>
+                        </div>
+                    </div>
+                </div>
+                <!---/임대정보-->
+<!---임대정보-->
+                <div class="business_manage">
+                    <div class="list_style_c gap-3">
+                        <div class="list_item_title">
+                            <div>
+                                라이나 생명
+                            </div>
+                            <div>
+                                임꺽정
+                            </div>
+                        </div>
+                        <div class="list_item_wrap">
                             <div class="list_item">
-                                <div class="sub cl_disabled">매출 정보가 없습니다.</div>
+                                <div class="title">전자세금계산서</div>
+                                <div class="sub">
+                                    <div><span>2</span>장</div>
+                                 </div>
+                                <div class="sub"> 
+                                    <div><span>2,000,000</span>원</div>
+                                </div>
                             </div>
-                            <a href="sale_info_detail.html" class="btn btn-md btn-outline-light">매출 상세정보 확인하기 <span
+                            <a href="sale_info_detail.html" class="btn btn-md btn-warning">매출 상세정보 확인하기 <span
                                     class="material-symbols-outlined ms-2">
                                     search
                                 </span></a>
@@ -114,30 +152,35 @@ include("include/head.php");
                 <!---임대정보2-->
                 <div class="business_manage">
                     <div class="list_style_c gap-3">
-                        <div class="list_item_title">연삼로 29-100 / 2층 201-203호</div>
-                        <div class="list_item_wrap">
-                            <div class="list_item">
-                                <div class="title">임차인 상호</div>
-                                <div class="sub">라이프 생명</div>
+                        <div class="list_item_title">
+                            <div>
+                                라이나 생명
                             </div>
+                            <div>
+                                임꺽정
+                            </div>
+                        </div>
+                        <div class="list_item_wrap">
                             <div class="list_item">
                                 <div class="title">전자세금계산서</div>
                                 <div class="sub">
                                     <div><span>2</span>장</div>
-                                    <div><span>2,150,000</span>원</div>
+                                 </div>
+                                <div class="sub">
+                                     <div><span>2,000,000</span>원</div>
                                 </div>
                             </div>
-                            <a href="sale_info_detail.html" class="btn btn-md btn-outline-light">매출 상세정보 확인하기 <span
+                            <a href="sale_info_detail.html" class="btn btn-md btn-success">매출 상세정보 확인완료 <span
                                     class="material-symbols-outlined ms-2">
-                                    search
+                                    check
                                 </span></a>
                         </div>
                     </div>
                 </div>
                 <!---/임대정보2-->
             </div>
-            <div class="fixed_bottom full d-flex flex-column bg-light-gray">
-                <div class="py-3 bottom-center-checkbox ">
+            <div class="fixed_bottom full d-flex flex-column ">
+                <div class="py-3 bottom-center-checkbox bg-light-gray w-100">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label fs-6" for="flexCheckDefault">
@@ -151,6 +194,40 @@ include("include/head.php");
 
         </div>
         <!--content e-->
+
+
+          <!--Dialogs s-->
+          <div class="modal fade" id="callout-dialogs" tabindex="-1" data-bs-backdrop="static"
+          aria-labelledby="callout-dialogsLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">안내</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-3 ">
+                      (정석학원)의 매출 상세정보가 확인되지 않았습니다.<br> 
+                      (정석학원)의 매출 상세정보를 확인해주세요.
+                  </div>
+                  <div class="modal-footer">
+                      <!--button type="button" class="btn  btn-gray" onclick="location.href='vat2.html'">해당 없음</button-->
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--Dialogs e-->
+
+ <script>
+            $(function () {
+                $("#callout-dialogs").modal("show");
+            });
+        </script>
+
+<?
+        include("include/footer.php");
+        ?>
+
 
 
 </body>

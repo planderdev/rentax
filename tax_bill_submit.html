@@ -1,0 +1,199 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">세금계산서 발송</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container bg-light-gray ">
+            <section class="bg-white pb-1"> 
+                <div class="px-3"> 
+                    <!--사업자-->
+                    <div class="business_manage business_card">
+                        <div class="list_style_c">
+                            <div class="list_item_wrap">
+                                <div class="list_item">
+                                    <div class="title">사업자 등록번호</div>
+                                    <div class="sub">132-77-15487</div>
+                                </div>
+                                <div class="list_item">
+                                    <div class="title">사업종류</div>
+                                    <div class="sub">제주 빌딩</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---/사업자-->
+                    <div class="info_box_outline my-3">
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="material-symbols-outlined">
+                                info
+                            </span>
+                            <div>
+                                임차인의 전화번호를 확인하고 종이세금계산서를 발송해주세요.
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+            <div class="sale_info_wrap">
+                  <!---임대정보-->
+                <div class="sale_manage border-gray">
+                    <div class="list_style_c gap-3">
+                        <div class="list_item_title">
+<div>정석학원</div>
+<div>홍길동</div>
+</div>
+                        <div class="list_item_wrap">
+                             
+                            <div class="d-flex gap-2 flex-column cl_description pt-1 pb-3 border-bottom">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1">
+                                    5월 15일
+                                </div>
+                                <div class="flex-3 text-end">
+                                    <span>1,500,000</span>원
+                                </div>
+                            </div> 
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1">
+                                    6월 15일
+                                </div>
+                                <div class="flex-3 text-end">
+                                    <span>1,500,000</span>원
+                                </div>
+                            </div> 
+                        </div>
+                            <div class="list_item">
+                                <div class="title">합계</div>
+                                <div class="body1"><span>2</span>장</div>
+                                <div class="sub text-end "> 
+                                  <span>3,000,000</span>원
+                                </div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">임차인 전화번호</div>
+                                <div class="sub text-end">
+                                    <input class="form-control" type="text" placeholder="" value="010-1234-5678" aria-label="default input example">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-md btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#callout-dialogs">세금계산서 발송하기 <span class="material-symbols-outlined ms-2">
+                                send
+                                </span></button>
+                        </div>
+                    </div>
+                </div>
+                <!---/임대정보--> 
+                 <!---임대정보-->
+                 <div class="sale_manage border-gray">
+                    <div class="list_style_c gap-3">
+                        <div class="list_item_title">
+<div>정석학원</div>
+<div>홍길동</div>
+</div>
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">임차인 상호</div>
+                                <div class="sub text-end">아라동 학원</div>
+                            </div>
+                            <div class="d-flex gap-2 flex-column cl_description pt-1 pb-3 border-bottom">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1">
+                                    5월 15일
+                                </div>
+                                <div class="flex-3 text-end">
+                                    <span>1,500,000</span>원
+                                </div>
+                            </div> 
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1">
+                                    6월 15일
+                                </div>
+                                <div class="flex-3 text-end">
+                                    <span>1,500,000</span>원
+                                </div>
+                            </div> 
+                        </div>
+                            <div class="list_item">
+                                <div class="title">합계</div>
+                                <div class="body1"><span>2</span>장</div>
+                                <div class="sub text-end "> 
+                                  <span>3,000,000</span>원
+                                </div> 
+                            </div>
+                            <div class="list_item">
+                                <div class="title">임차인 전화번호</div>
+                                <div class="sub text-end">
+                                    <input class="form-control" type="text" placeholder="" value="010-1234-5678" aria-label="default input example">
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-md btn-dark mt-3">세금계산서 발송완료 <span class="material-symbols-outlined ms-2">
+                                check
+                                </span></a>
+                        </div>
+                    </div>
+                </div>
+                <!---/임대정보--> 
+            </div>
+            <div class="fixed_bottom full d-flex flex-column bg-light-gray"> 
+                <a href="vat_list.html" class="btn btn-lg flex-1 btn-primary">종이세금계산서 발송 완료</a>
+            </div>
+        </div>
+        <!--content e--> 
+
+       <!--Dialogs s-->
+       <div class="modal fade" id="callout-dialogs" tabindex="-1" data-bs-backdrop="static"
+       aria-labelledby="callout-dialogsLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-centered">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title">안내</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body px-3">
+                   <span class="fw-bold me-2">010-1234-5678</span>으로 발행한 세금계산서를 보냅니다.
+               </div>
+               <div class="modal-footer">
+                   <!--button type="button" class="btn  btn-gray" onclick="location.href='vat2.html'">해당 없음</button-->
+                   <a href="vat_list.html" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</a>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!--Dialogs e-->
+
+
+</body>
+
+</html>

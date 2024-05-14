@@ -82,16 +82,7 @@ include("include/head.php");
                     </div>
                 </div>
                 <!---/사업자-->
-                <div class="info_box_outline my-3">
-                    <div class="d-flex gap-2 align-items-center">
-                        <span class="material-symbols-outlined">
-                            info
-                        </span>
-                        <div>
-                            매입 세금계산서에서 상호, 매수, 공급가액을 등록해주세요.
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <form class="needs-validation" novalidate>
@@ -100,11 +91,11 @@ include("include/head.php");
                     <div class="lease_info_list border-0 gap-3">
                         <div class="d-flex align-items-center border-list">
                             <div class="flex-1  fw-bold">
-                                상호
+                                거래처 상호
                             </div>
-                            <div class="flex-2">
+                            <div class="flex-1">
                                 <div class="input-group has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add1" value="제주 건물관리"
+                                    <input type="text" class="form-control text-start" id="add1" value="제주 건물관리"
                                         aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-tooltip">
                                         필수 입력 항목입니다.
@@ -112,36 +103,24 @@ include("include/head.php");
                                 </div>
                             </div>
                         </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                거래 일자
+                            </div>
+                            <div class="flex-1">
+                                <input type="text" class="form-control text-start" value="2024-03-21"
+                                    data-bs-toggle="modal" data-bs-target="#calendarmodal" readonly>
+                            </div>
+                        </div>
+
                         <div class="d-flex align-items-center ">
                             <div class="flex-1  fw-bold">
-                                매수
+                                지급액 합계
                             </div>
-                            <div class="flex-2">
+                            <div class="flex-1">
                                 <div class="input-group has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add2"
-                                        aria-describedby="inputGroupPrepend" value="6" required>
-                                    <span>장</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info_box_outline">
-                            <div class="d-flex gap-2 align-items-center">
-                                <span class="material-symbols-outlined">
-                                    info
-                                </span>
-                                <div>
-                                    동일한 금액의 세금계산서가 여러장이면 매수를 등록해주세요. 거래처가 동일해도 금액이 다르면 따로 등록해주세요.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-1  fw-bold">
-                                공급가액
-                            </div>
-                            <div class="flex-2">
-                                <div class="input-group  has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add3"
-                                        aria-describedby="inputGroupPrepend" value="1,800,000" required>
+                                    <input type="text" class="form-control text-end" id="add2"
+                                        aria-describedby="inputGroupPrepend" value="1,980,000" required>
                                     <span>원</span>
                                 </div>
                             </div>
@@ -155,23 +134,73 @@ include("include/head.php");
                                     거래처에 지급한 금액 전체를 등록해주세요.
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                         <div class="d-flex align-items-center border-list">
                             <div class="flex-1  fw-bold">
-                                세액
+                                공급가액
                             </div>
-                            <div class="flex-2 text-end">
+                            <div class="flex-1 text-end">
                                 <span>1,800,000</span>원
                             </div>
                         </div>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-1  fw-bold cl_dark">
-                                합계
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                부가가치 세액
                             </div>
-                            <div class="flex-2 text-end fw-bold cl_dark">
-                                <span>1,980,000</span>원
+                            <div class="flex-1 text-end">
+                                <span>180,000</span>원
                             </div>
                         </div>
+                         <button type="submit" class="btn btn-lg btn-primary">등록</button>
+                         <!--종이세금계산서-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc3">
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header bg-primary-lightest rd-3" id="sale_info_c">
+                            <div class="accordion-button bg-transparent" data-bs-toggle="collapse" data-bs-target="#sale_content_c"
+                                aria-expanded="true" aria-controls="sale_content_c">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start"> 
+                                        종이세금계산서
+                                    </div>
+                                    <div class="center">
+                                        <span>1</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>1,800,000</span>원
+                                    </div>  
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_c" class="accordion-collapse collapse show" aria-labelledby="sale_info_c"
+                            data-bs-parent="#sale_info_acc3">
+                            <div class="accordion-body bg-primary-lightest">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 3 / 21
+                                    </div>
+                                    <div class="flex-2 text-end">
+                                        <span>1,800,000</span>원
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="sale_info_submit_edit.html"
+                                            class="btn btn-sm btn-primary w-70 ms-3">수정</a>
+                                    </div>
+                                </div>
+                                <a href="sale_info_submit.html" class="btn btn-md btn-primary mt-3">종이세금계산서 추가 <span
+                                        class="material-symbols-outlined ms-2">
+                                        add_circle
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/종이세금계산서-->
+                <div class="info_box_outline mb-3">
+                    <ul>
+                        <li>[종이세금계산서 추가]를 누르면 종이세금계산서가 추가 등록됩니다.</li>
+                    </ul>
+                </div>
+
                     </div>
                     <!--임대계약 소재지 e-->
 
@@ -187,6 +216,27 @@ include("include/head.php");
         </div>
         <!--content e-->
 
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
 
         <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields

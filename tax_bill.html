@@ -6,7 +6,7 @@ include("include/head.php");
     <div id="wrap">
         <!--Title Header s-->
         <header
-            class="d-none bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
             <nav class="navbar">
                 <div class="container-fluid">
                     <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
@@ -19,7 +19,7 @@ include("include/head.php");
                         </svg>
                     </button>
                     <div data-include1="header" id="header"></div>
-                    <div class="header_title">계약서 사진</div>
+                    <div class="header_title">종이세금계산서 발송 안내</div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -36,59 +36,48 @@ include("include/head.php");
         <!--Title Header e-->
         <!--content s-->
         <div class="container pb-0">
-
             <div class="d-flex justify-content-center flex-column px-3 vh-80">
                 <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="img/vat_img.png" class="w-70">
+                    <img src="img/3d_img3.png" class="w-60">
                 </div>
                 <div class="mt-4 text-center">
-                    <div class="subtitle2">
-                        24년 6월 말일까지 전자세금계산서 또는 현금 영수증을 발행하거나 받는 거래가 있었습니까? 
-                    </div>
+                    <div class="subtitle2">임대료 수입에 대한 종이세금계산서가 있습니다.</div>
                     <div class="cl_description mt-3">
-                        전자세금계산서 또는 현금영수증은 15일에 확정되기에 해당 정보를 다시 수집해야 합니다. 
+                        종이세금계산서를 임차인에게 전달하지 않았으면 임차인에게 종이세금계산서를 간편하게 전달할 수 있습니다.
                     </div>
                 </div>
-            </div>  
-
-                <div class="fixed_bottom full d-flex">
-                    <button type="button" class="btn btn-lg w-50 btn-gray" onclick="location.href='vat2.html'">정보 다시 수집</button>
-                    <button type="button" class="btn btn-lg w-50 btn-primary"
-                        onclick="location.href='vat_list.html'">해당 없음</button>
-                </div>
-            
+            </div> 
+            <div class="fixed_bottom d-flex">
+                <button type="button" class="btn btn-full flex-1 btn-primary-light" onclick="location.href='tax_bill_submit.html'">임차인에게 종이세금계산서 전달</button>
+                <button type="button" class="btn btn-full flex-1 btn-primary" data-bs-toggle="modal"
+                data-bs-target="#vatmodal">전달안함</button>
+            </div> 
         </div>
         <!--content e-->
-        <script>
-            let fileInput = document.getElementById("file-input");
-            let imageContainer = document.getElementById("images");
-            let numOfFiles = document.getElementById("num-of-files");
+         <!-- Dialogs s-->
+         <div class="modal fade" id="vatmodal" tabindex="-1" aria-labelledby="vatmodalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h1 class="modal-title fs-5" id="vatmodalLabel">안내</h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body px-3">
+                     종이세금계산서를 임차인에게 전달하지 않습니다.
+                 </div>
+                 <div class="modal-footer">
+                      <a href="vat_list.html" class="btn btn-primary w-100">확인</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- Dialogs e-->
 
-            function preview() {
-                imageContainer.innerHTML = "";
-                numOfFiles.textContent = `${fileInput.files.length} 개의 파일이 등록되었습니다.`;
-
-                for (i of fileInput.files) {
-                    let reader = new FileReader();
-                    let figure = document.createElement("figure");
-                    let figCap = document.createElement("figcaption");
-                    figCap.innerText = i.name;
-                    figure.appendChild(figCap);
-                    reader.onload = () => {
-                        let img = document.createElement("img");
-                        img.setAttribute("src", reader.result);
-                        figure.insertBefore(img, figCap);
-                    }
-                    imageContainer.appendChild(figure);
-                    reader.readAsDataURL(i);
-                }
-            }
-        </script>
         <?
-include("include/footer.php");
-?>
+    include("include/footer.php");
+    ?>
 
 </body>
-
 
 </html>

@@ -6,7 +6,7 @@ include("include/head.php");
     <div id="wrap">
         <!--Title Header s-->
         <header
-            class="d-none bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
             <nav class="navbar">
                 <div class="container-fluid">
                     <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
@@ -19,7 +19,7 @@ include("include/head.php");
                         </svg>
                     </button>
                     <div data-include1="header" id="header"></div>
-                    <div class="header_title">계약서 사진</div>
+                    <div class="header_title">임대계약서 사진 등록</div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -36,27 +36,55 @@ include("include/head.php");
         <!--Title Header e-->
         <!--content s-->
         <div class="container pb-0">
-
-            <div class="d-flex justify-content-center flex-column px-3 vh-80">
-                <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="img/vat_img.png" class="w-70">
-                </div>
-                <div class="mt-4 text-center">
-                    <div class="subtitle2">
-                        24년 6월 말일까지 전자세금계산서 또는 현금 영수증을 발행하거나 받는 거래가 있었습니까? 
+            <!--step s-->
+           <div class="stepper_wrapper ">
+            <div class="stepper_item active">
+                <div class="step_counter">1</div>
+                <div class="step_name">임대계약</div>
+             </div>
+            <div class="stepper_item">
+                <div class="step_counter">2</div>
+             </div>
+            <div class="stepper_item">
+                <div class="step_counter">3</div>
+             </div>
+            <div class="stepper_item">
+                <div class="step_counter">4</div>
+             </div>
+             <div class="stepper_item">
+                <div class="step_counter">5</div>
+             </div>
+             <div class="stepper_item">
+                <div class="step_counter">6</div>
+             </div>
+             <div class="stepper_item">
+                <div class="step_counter">7</div>
+             </div>
+        </div>
+        <!--step e-->  
+            <div class="d-flex flex-column px-3 vh-100"> 
+                <div class="mt-2"> 
+                        <div id="images" class="my-3"><span>갤러리에 있는 사진을 등록해 주세요.</span></div>
+                        <div class="upload_thumnail_wrap">
+                        <div class="thum" data-bs-toggle="button"><img src="img/bg/intro.jpg"></div>    
+                        <div class="thum" data-bs-toggle="button"><img src="img/bg/intro.jpg"></div>  
+                        <div class="thum"> 
+                        <input type="file" id="file-input" accept="image/png, image/jpeg" onchange="preview()" multiple>
+                        <button type="button" class="btn btn-lg btn-primary-light">
+                            <label class="cl_dark" for="file-input">
+                                <span class="material-symbols-outlined">upload</span>
+                            </label>
+                        </button>
+                        <p id="num-of-files" class="d-none"></p>
+                    </div> 
                     </div>
-                    <div class="cl_description mt-3">
-                        전자세금계산서 또는 현금영수증은 15일에 확정되기에 해당 정보를 다시 수집해야 합니다. 
-                    </div>
-                </div>
-            </div>  
+                 </div>
 
-                <div class="fixed_bottom full d-flex">
-                    <button type="button" class="btn btn-lg w-50 btn-gray" onclick="location.href='vat2.html'">정보 다시 수집</button>
-                    <button type="button" class="btn btn-lg w-50 btn-primary"
-                        onclick="location.href='vat_list.html'">해당 없음</button>
+                <div class="fixed_bottom full d-flex"> 
+                    <button type="button" class="btn btn-lg w-100 btn-primary"
+                        onclick="location.href='vat_agent_submit.html'">등록</button>
                 </div>
-            
+            </div>
         </div>
         <!--content e-->
         <script>

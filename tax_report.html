@@ -1,0 +1,165 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">부가가치세 신고서</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <section class="bg-white">
+                <!--step s-->
+                <div class="stepper_wrapper ">
+                    <div class="stepper_item active">
+                        <div class="step_counter">1</div>
+                        <!--div class="step_name">임대 계약</div-->
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">2</div>
+                        <!--div class="step_name">매출 정보</div-->
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">3</div>
+                        <!--div class="step_name">매입 정보</div-->
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">4</div>
+                        <!--div class="step_name">세액 공제</div-->
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">5</div>
+                        <div class="step_name">신고서</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">6</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">7</div>
+                    </div>
+                </div>
+                <!--step e--> 
+                <div class="px-3 mb-3"> 
+                    <!--사업자-->
+                    <div class="business_manage business_card">
+                        <div class="list_style_c">
+                            <div class="list_item_wrap">
+                                <div class="list_item">
+                                    <div class="title">사업자 등록번호</div>
+                                    <div class="sub fw-bold">132-77-15487</div>
+                                </div>
+                                <div class="list_item">
+                                    <div class="title">사업종류</div>
+                                    <div class="sub">제주 빌딩</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---/사업자-->
+                    <div class="info_box mt-3">
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="material-symbols-outlined">
+                                info
+                            </span>
+                            <div>
+                                <p>일반과세자이기에 부가가치세는 아래와 같이 계산됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+<div class="info_box mt-3">
+                        <div class="d-flex gap-2 align-items-center">
+                            <span class="material-symbols-outlined">
+                                info
+                            </span>
+                            <div>
+                                <p>간이과세자이기에 부가가치세는 아래와 같이 계산됩니다. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="py-3 py-3 fs-6 border mx-3 my-4 d-flex flex-column gap-3 rounded-3 ">
+                <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                    <div class="flex-2 fw-bold">매출 부가세</div>
+                    <div class="flex-1 text-end"><span>500,000</span>원</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                    <div class="flex-2 fw-bold">간주임대료 부가세</div>
+                    <div class="flex-1 text-end"><span>15,000</span>원</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                    <div class="flex-2 fw-bold">
+                        <div class="d-flex">매입 부가세</div>
+                    </div>
+                    <div class="flex-1 text-end"><span class="cl_danger">-370,000</span>원</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                    <div class="flex-2 fw-bold">
+                        <div class="d-flex">세액 공제</div>
+                    </div>
+                    <div class="flex-1 text-end"><span class="cl_danger">-10,400</span>원</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+                    <div class="flex-2 fw-bold">
+                        <div class="d-flex">이미 납부한 세액</div>
+                    </div>
+                    <div class="flex-1 text-end"><span class="cl_danger">-250,000</span>원</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="flex-2 fw-bold">
+                        <div class="d-flex">납부(환급) 세액</div>
+                    </div>
+                    <div class="flex-1 text-end"><span class="cl_danger">-115,400</span>원</div>
+                </div>
+            </div>
+
+            <!--합계-->
+            <div class="total_wrap">
+                <div class="total_item">
+                    <div><span>환급 받을 금액</span></div>
+                    <div><span>- 115,400</span>원</div>
+                </div>
+            </div>
+            <!--/합계-->
+     
+        </div>
+        <div class="fixed_bottom full d-flex flex-column bg-light-gray">
+
+            <button type="button" class="btn btn-lg flex-1 btn-primary"
+                onclick="location.href='tax_account.html'">다음</button>
+        </div>
+    </div>
+    <!--content e-->
+
+
+</body>
+
+</html>

@@ -19,7 +19,7 @@ include("include/head.php");
                         </svg>
                     </button>
                     <div data-include1="header" id="header"></div>
-                    <div class="header_title">매출 세금계산서 수정</div>
+                    <div class="header_title">매출 종이세금계산서</div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -66,40 +66,170 @@ include("include/head.php");
                     </div>
                 </div>
                 <!--step e-->
+                <div class="px-3">
+                    <!--Accordion-->
+                    <div class="accordion my-3" id="info_accordion_a">
+                        <div class="accordion-item border-0 bg-primary-lightest">
+                            <h2 class="accordion-header " id="panelsStayOpen-headingtwo">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapsetwo">
+                                    임대 계약 정보
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapsetwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingtwo">
+                                <div class="accordion-body bg-transparent">
+                                    <div class="list_style_c py-3">
+                                        <div class="list_item_wrap sm">
+                                            <div class="list_item">
+                                                <div class="title">사업자번호</div>
+                                                <div class="sub text-end">112-82-12345</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">임차인 상호</div>
+                                                <div class="sub text-end">정석학원</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">대표자 성명</div>
+                                                <div class="sub text-end">이몽룡</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">계약 시작일</div>
+                                                <div class="sub text-end">2024년 4월15일</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">계약 종료일</div>
+                                                <div class="sub text-end">2025년 4월15일</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">월 임대료</div>
+                                                <div class="sub text-end"><span>1,500,000</span>원</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">부가가치세</div>
+                                                <div class="sub text-end">불포함</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">선불/후불</div>
+                                                <div class="sub text-end">후불</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Accordion-->
+                </div>
             </section>
-            <div class="sale_info_wrap">
-                <!---임대정보-->
-                <div class="sale_manage border-gray">
-                    <div class="list_style_c gap-3">
-                        <div class="list_item_title">연동 123-45 / 2층 201-203,205호</div>
-                        <div class="list_item_wrap">
-                            <div class="list_item">
-                                <div class="title">임차인 상호</div>
-                                <div class="sub text-end">정석 학원</div>
+            
+            <div class="sale_info_wrap"> 
+                <!--전자세금계산서-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sale_info_a">
+                            <div class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#sale_content_a"
+                                aria-expanded="true" aria-controls="sale_content_a">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start">
+                                        전자세금계산서
+                                    </div>
+                                    <div class="center">
+                                        <span>1</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_a" class="accordion-collapse collapse show" aria-labelledby="sale_info_a"
+                            data-bs-parent="#sale_info_acc">
+                            <div class="accordion-body ">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 5 / 15
+                                    </div>
+                                    <div class="flex-3 text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!---/임대정보--> 
-                <!--form-->
+                <!--/전자세금계산서-->
+                <!--임대료-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sale_info_b">
+                            <div class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#sale_content_b" aria-expanded="false" aria-controls="sale_content_b">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start"> 
+                                        임대료
+                                    </div>
+                                    <div class="center">
+                                        <span>0</span>개월
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
+                                    </div> 
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_b" class="accordion-collapse collapse" aria-labelledby="sale_info_b"
+                            data-bs-parent="#sale_info_acc2">
+                            <div class="accordion-body ">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 5 / 15
+                                    </div>
+                                    <div class="flex-3 text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/임대료-->
+                <!--종이세금계산서-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sale_info_c">
+                            <div class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#sale_content_c"
+                                aria-expanded="true" aria-controls="sale_content_c">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start"> 
+                                        종이세금계산서
+                                    </div>
+                                    <div class="center">
+                                        <span>0</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
+                                    </div>  
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_c" class="accordion-collapse collapse show" aria-labelledby="sale_info_c"
+                            data-bs-parent="#sale_info_acc3">
+                            <div class="accordion-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 6 / 15
+                                    </div>
+                                    <div class="flex-2 text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                     
+                                </div>
+                                
+                                 <!--form-->
                 <form>
-                    <div class="sale_info_form">
-                        <div class="d-flex align-items-center border-list">
-                            <div class="flex-1">
-                                상호
-                            </div>
-                            <div class="flex-2">
-                                정석 학원
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center border-list">
-                            <div class="flex-1">
-                                사업자 번호
-                            </div>
-                            <div class="flex-2">
-                                124-45-67890
-                            </div>
-                        </div>
+                    <div class="sale_info_form px-0">  
                         <div class="d-flex align-items-center border-list">
                             <div class="flex-1">
                                 작성일
@@ -115,7 +245,7 @@ include("include/head.php");
                             </div>
                             <div class="flex-2">
                                 <div class="input-group has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add2"
+                                    <input type="text" class="form-control text-end" id="add2"
                                         aria-describedby="inputGroupPrepend" value="1,500,000" required>
                                     <span>원</span>
                                 </div>
@@ -136,16 +266,22 @@ include("include/head.php");
                             <div class="flex-2 fw-bold cl_dark">
                                 <span>1,650,000</span>원
                             </div>
-                        </div>
-                        <button type="button" class="btn btn-md w-100 mt-2 btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#delete-dialogs">세금계산서 삭제</button>
+                        </div> 
                     </div> 
                     <div class="fixed_bottom full d-flex">
+                        <button type="button" class="btn btn-lg flex-1 btn-primary-light" data-bs-toggle="modal"
+                            data-bs-target="#delete-dialogs">삭제</button>
                         <button type="submit" class="btn btn-lg flex-1 btn-primary" data-bs-toggle="modal"
                             data-bs-target="#save-dialogs">저장</button>
                     </div>
                 </form>
                 <!--/form-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/종이세금계산서-->
+               
             </div>
         </div>
         <!--content e-->

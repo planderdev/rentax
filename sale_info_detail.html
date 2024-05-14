@@ -79,7 +79,7 @@ include("include/head.php");
                                 <button class="accordion-button collapsed bg-transparent" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
                                     aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                                    매출 상세 정보
+                                    매출 증빙이란?
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
@@ -87,7 +87,16 @@ include("include/head.php");
                                 <div class="accordion-body bg-transparent">
                                     <div class="bar_list px-3 ">
                                         <ul>
-                                            <li>내용 필요</li>
+                                            <li>
+임대료는 적격증빙을 발행하고, 임차인에게 전달해야 합니다.
+<br><br>
+<p class="fw-bold">적격증빙의 종류</p>
+<p>1. 전자, 종이 세금계산서</p>
+<p>2. 현금영수증</p>
+<br>
+</li>
+<li>전자세금계산서와 현금영수증은 국세청의 자료를 자동으로 수집합니다.</li>
+<li>종이세금계산서는 직접 등록 해야 합니다.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -101,18 +110,17 @@ include("include/head.php");
                 <!---임대정보-->
                 <div class="sale_manage border-gray">
                     <div class="list_style_c gap-3">
-                        <div class="list_item_title">연동 123-45 / 2층 201-203,205호</div>
+                        <div class="list_item_title">정석학원<div>홍길동</div></div>
                         <div class="list_item_wrap">
-                            <div class="list_item">
-                                <div class="title">임차인 상호</div>
-                                <div class="sub text-end">정석 학원</div>
-                            </div>
+                            
                             <div class="list_item">
                                 <div class="title">합계</div>
-                                <div class="sub text-end">
-                                    <div><span>1</span>장</div>
-                                    <div><span>1,500,000</span>원</div>
+                                <div class="body1 center">
+                                    <span>1</span>장
                                 </div>
+                                <div class="sub text-end"> 
+                                  <span>1,500,000</span>원
+</div>
                             </div>
                         </div>
                     </div>
@@ -125,11 +133,14 @@ include("include/head.php");
                             <div class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#sale_content_a"
                                 aria-expanded="true" aria-controls="sale_content_a">
                                 <div class="d-flex justify-content-between align-items-center w-85">
-                                    <div>
+                                    <div class="start">
                                         전자세금계산서
                                     </div>
-                                    <div class="text-end">
-                                        <span class="ms-2">1장</span><span class="ms-2">1,500,000</span>원
+                                    <div class="center">
+                                        <span>1</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>1,500,000</span>원
                                     </div>
                                 </div>
                             </div>
@@ -150,19 +161,22 @@ include("include/head.php");
                     </div>
                 </div>
                 <!--/전자세금계산서-->
-                <!--현금영수증-->
+                <!--임대료-->
                 <div class="accordion accordion-flush border-accordion" id="sale_info_acc2">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="sale_info_b">
                             <div class="accordion-button collapsed" data-bs-toggle="collapse"
                                 data-bs-target="#sale_content_b" aria-expanded="false" aria-controls="sale_content_b">
                                 <div class="d-flex justify-content-between align-items-center w-85">
-                                    <div>
-                                        현금영수증
+                                    <div class="start"> 
+                                        임대료
                                     </div>
-                                    <div class="text-end">
-                                        <span class="ms-2">0장</span><span class="ms-2">0</span>원
+                                    <div class="center">
+                                        <span>0</span>개월
                                     </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
+                                    </div> 
                                 </div>
                             </div>
                         </h2>
@@ -181,7 +195,7 @@ include("include/head.php");
                         </div>
                     </div>
                 </div>
-                <!--/현금영수증-->
+                <!--/임대료-->
                 <!--종이세금계산서-->
                 <div class="accordion accordion-flush border-accordion" id="sale_info_acc3">
                     <div class="accordion-item">
@@ -189,12 +203,15 @@ include("include/head.php");
                             <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sale_content_c"
                                 aria-expanded="true" aria-controls="sale_content_c">
                                 <div class="d-flex justify-content-between align-items-center w-85">
-                                    <div>
+                                    <div class="start"> 
                                         종이세금계산서
                                     </div>
-                                    <div class="text-end">
-                                        <span class="ms-2">0장</span><span class="ms-2">0</span>원
+                                    <div class="center">
+                                        <span>0</span>장
                                     </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
+                                    </div> 
                                 </div>
                             </div>
                         </h2>

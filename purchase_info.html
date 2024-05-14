@@ -72,8 +72,7 @@ include("include/head.php");
                             <li>매입 세금계산서와 현금영수증 정보를 확인해 주세요.</li>
                             <li>종이세금계산서는 [매입 종이세금계산서 등록] 버튼을 통해 등록해 주세요.</li>
                         </ul>
-                    </div>
-
+                    </div>  
                     <!--사업자-->
                     <div class="business_manage business_card">
                         <div class="list_style_c">
@@ -92,7 +91,7 @@ include("include/head.php");
                     <!---/사업자-->
 
                     <!--Accordion-->
-                    <div class="accordion my-4 " id="info_accordion">
+                    <div class="accordion my-3 " id="info_accordion">
                         <div class="accordion-item border-0 bg-primary-lightest">
                             <h2 class="accordion-header " id="panelsStayOpen-headingOne">
                                 <button class="accordion-button collapsed bg-transparent" type="button"
@@ -141,40 +140,40 @@ include("include/head.php");
                             <div class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#sale_content_a"
                                 aria-expanded="true" aria-controls="sale_content_a">
                                 <div class="d-flex justify-content-between align-items-center w-85">
-                                    <div>
+                                    <div class="start">
                                         전자세금계산서
                                     </div>
-                                    <div class="text-end">
-                                        <span class="ms-2">2장</span><span class="ms-2">1,900,000</span>원
+                                    <div class="center">
+                                        <span>2</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>1,900,000</span>원
                                     </div>
                                 </div>
                             </div>
                         </h2>
                         <div id="sale_content_a" class="accordion-collapse collapse show" aria-labelledby="sale_info_a"
                             data-bs-parent="#sale_info_acc">
-                            <div class="accordion-body">
+                            <div class="accordion-body py-0">
                                 <div class="purchase_list">
                                     <div class="item">
                                         <div class="title">LG 전자</div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="flex-1">
-                                                3월 10일
-                                            </div>
-                                            <div class="flex-3 text-end">
+                                        <div class="flex-1">
+                                            3월 10일
+                                        </div> 
+                                            <div class="flex-1 text-end">
                                                 <span>1,200,000</span>원
-                                            </div>
-                                        </div>
+                                            </div> 
                                     </div>
                                     <div class="item">
                                         <div class="title">한국설비</div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="flex-1">
-                                                5월 20일
-                                            </div>
-                                            <div class="flex-3 text-end">
+                                        <div class="flex-1">
+                                            5월 20일
+                                        </div> 
+                                            <div class="flex-1 text-end">
                                                 <span>700,000</span>원
                                             </div>
-                                        </div>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -189,11 +188,14 @@ include("include/head.php");
                             <div class="accordion-button collapsed" data-bs-toggle="collapse"
                                 data-bs-target="#sale_content_b" aria-expanded="false" aria-controls="sale_content_b">
                                 <div class="d-flex justify-content-between align-items-center w-85">
-                                    <div>
+                                    <div class="start">
                                         현금영수증
                                     </div>
-                                    <div class="text-end">
-                                        <span class="ms-2">0장</span><span class="ms-2">0</span>원
+                                    <div class="center">
+                                        <span>0</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +207,7 @@ include("include/head.php");
                                     <div class="flex-1">
                                         24 / 5 / 15
                                     </div>
-                                    <div class="flex-3 text-end">
+                                    <div class="flex-1 text-end">
                                         <span>1,500,000</span>원
                                     </div>
                                 </div>
@@ -221,11 +223,14 @@ include("include/head.php");
                             <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sale_content_c"
                                 aria-expanded="true" aria-controls="sale_content_c">
                                 <div class="d-flex justify-content-between align-items-center w-85">
-                                    <div>
+                                    <div class="start">
                                         종이세금계산서
                                     </div>
-                                    <div class="text-end">
-                                        <span class="ms-2">0장</span><span class="ms-2">0</span>원
+                                    <div class="center">
+                                        <span>0</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
                                     </div>
                                 </div>
                             </div>

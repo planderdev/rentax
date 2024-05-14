@@ -1,0 +1,158 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">부가가치세 신고 완료</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container pb-0">  
+             <!--step s-->
+             <div class="stepper_wrapper">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                 </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">2</div>
+                 </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">3</div>
+                 </div>
+                <div class="stepper_item active">
+                    <div class="step_counter">4</div>
+                 </div>
+                 <div class="stepper_item active">
+                    <div class="step_counter">5</div>
+                 </div>
+                 <div class="stepper_item active">
+                    <div class="step_counter">6</div>
+                 </div>
+                 <div class="stepper_item active">
+                    <div class="step_counter">7</div>
+                    <div class="step_name">신고 완료</div>
+                 </div>
+            </div>
+            <!--step e-->  
+            <div class="d-flex justify-content-center flex-column px-3 "> 
+                <div class="text-center mb-4">
+                    <img src="img/success_icon.png" class="w-40">
+                    <div class="subtitle2">부가가치세 신고가 접수되었습니다.</div>
+                </div> 
+                <!--info s-->
+             <div class="lease_info_list_wrap "> 
+                <div class="lease_info_list bg-primary-lightest rounded-3">
+                     <div class="d-flex flex-column align-items-center">
+                        <div class="flex-1 cl_primary fw-bold">
+                            사업자등록번호
+                        </div>
+                        <div class="flex-1 cl_primary">
+                            <span>625-18-12845</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="flex-1 cl_primary fw-bold">
+                            전자납부번호
+                        </div>
+                        <div class="flex-1 cl_primary">
+                            <span>0126-2404-1-41-63579594</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--info e-->
+              <!--Accordion-->
+              <div class="accordion my-3" id="info_accordion">
+                <div class="accordion-item border-0 bg-primary-lightest">
+                    <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                        <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            부가가치세 납부 방법
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body bg-transparent">
+                            <div class="px-3 pb-3">
+                                <ul>
+                                     <li>
+                                        1. 홈택스에서 납부
+                                        <div class="ps-3 pb-3">
+                                            <p>1) 홈택스 - 로그인</p> 
+                                            <p>2) 납부 (고지.환급) - 선택</p> 
+                                            <p>3) 납부할 세액 조회/납부 – 선택</p> 
+                                            <p>4) 조회된 세액 선택 - 납부</p> 
+                                        </div>
+                                    </li>
+                                    <li>
+                                        2. ATM을 이용해서 카드로 납부
+                                        <div class="ps-3 pb-3">
+                                            <p>1) 지방세/국세/지로공과금 – 선택</p> 
+                                            <p>2) 전자납부번호 – 입력</p> 
+                                            <p>3) 조회된 세액 - 납부</p> 
+                                         </div>
+                                    </li>
+                                    <li>
+                                        3. 인터넷지로에서 납부
+                                        <div class="ps-3 pb-3">
+                                            <p>1) 인터넷 지로 – 로그인</p> 
+                                            <p>2) 국세 - 선택</p> 
+                                            <p>3) 조회 납부 – 주민등록번호 조회</p> 
+                                            <p>4) 조회된 세액 선택 - 납부</p> 
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Accordion-->
+                <div class="mt-4 text-center"> 
+                    <div class="body1 cl_description mt-3">
+                    <p>부가가치세는 사업자등록번호별로 신고해야 합니다.</p>
+                    <p>신고하지 않은 사업자가 있으면 신고해주세요.</p>
+                </div>
+                </div>
+            </div>
+            <div class="fixed_bottom d-flex">
+                 <button type="button" class="btn btn-full flex-1 btn-primary" onclick="location.href='tax_bill.html'">다음</button>
+            </div>
+
+        </div>
+        <!--content e-->
+        <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+</html>

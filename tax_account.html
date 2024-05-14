@@ -1,0 +1,137 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">환급 계좌 등록</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <section class="bg-white">
+                <!--step s-->
+                <!--div class="stepper_wrapper">
+                    <div class="stepper_item active">
+                        <div class="step_counter">1</div>
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">2</div>
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">3</div>
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">4</div>
+                        <div class="step_name">세액 공제</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">5</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">6</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">7</div>
+                    </div>
+                </div-->
+                <!--step e-->
+<div class="tax_report_total bg-primary-lightest text-center">
+                <div class="icon">
+                    <img src="img/9289104.png">
+                </div>
+                <div class="body1  cl_description">
+                    <p class="mb-2">매출 부가세보다 매입 부가세등 공제 금액이 많아서 <span class="fw-bold cl_primary">115,400</span>원 환급이
+                        됩니다.</p>
+                    <p class="fw-bold cl_dark">환급받을 계좌를 등록해 주세요.</p>
+                </div>
+            </div>
+                <div class="px-3 mb-3"> 
+                    <!--사업자-->
+                    <!--div class="business_manage business_card">
+                        <div class="list_style_c">
+                            <div class="list_item_wrap">
+                                <div class="list_item">
+                                    <div class="title">사업자 등록번호</div>
+                                    <div class="sub">132-77-15487</div>
+                                </div>
+                                <div class="list_item">
+                                    <div class="title">사업종류</div>
+                                    <div class="sub">제주 빌딩</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div-->
+                    <!---/사업자-->
+                </div>
+            </section>
+            <!--form-->
+            <form>
+                <div class="lease_info_list gap-3 border-0">
+                    <div class="d-flex align-items-center border-list">
+                        <div class="flex-1  fw-bold">
+                            은행명
+                        </div>
+                        <div class="flex-2">
+                            <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                <option>선택해주세요</option>
+                                <option value="1" selected>농협은행</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <div class="flex-1  fw-bold">
+                            계좌번호
+                        </div>
+                        <div class="flex-2">
+                            <div class="input-group has-validation align-items-center ">
+                                <input type="text" class="form-control" id="add2" aria-describedby="inputGroupPrepend"
+                                    value="15454875413" required="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed_bottom full d-flex flex-column bg-light-gray">
+                    <a href="payment.html" class="btn btn-lg flex-1 btn-primary">다음</a>
+                </div>
+            </form>
+             <!--/form-->
+             
+        </div>
+    </div>
+    <!--content e-->
+
+
+</body>
+
+</html>

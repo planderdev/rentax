@@ -18,7 +18,7 @@ include("include/head.php");
                         </svg>
                     </button>
                     <div data-include1="header" id="header"></div>
-                    <div class="header_title">임대 계약 정보</div>
+                    <div class="header_title">임대부동산 정보</div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -35,76 +35,112 @@ include("include/head.php");
         <!--Title Header e-->
         <!--content s-->
         <div class="container">
-            <form class="needs-validation" novalidate>
-                <div class="lease_info_list_wrap mt-0">
-                    <!--임차인 정보-->
-                    <div class="lease_info_list gap-3 border-0">
-                        <div class="subtitle2">임차인 정보</div>
-                        <div class="d-flex align-items-center border-list">
-                            <div class="flex-1  fw-bold">
-                                임차인 상호
-                            </div>
-                            <div class="flex-2">
-                                <div class="input-group has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add1"
-                                        aria-describedby="inputGroupPrepend" value="라이프 생명" required>
-                                    <div class="invalid-tooltip">
-                                        필수 입력 항목입니다.
-                                    </div>
-                                </div>
-                            </div>
+            <!--step s-->
+            <div class="stepper_wrapper ">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                    <div class="step_name">임대계약</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">2</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">3</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">4</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">5</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">6</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">7</div>
+                </div>
+            </div>
+            <!--step e-->  
+            <div class="px-3 pb-3">
+                <div class="subtitle1">
+                    {라이나 생명} 임대계약
+                </div> 
+                </div>
+            <div class="px-3">
+                <div class="info_box_outline">
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="material-symbols-outlined">
+                            info
+                        </span>
+                        <div>
+                            정확한 주소를 등록하기 위해서 아래의 "주소 등록 방법"을 참고해주세요.
                         </div>
-                        <div class="d-flex align-items-center border-list">
-                            <div class="flex-1  fw-bold">
-                                대표자 성명
-                            </div>
-                            <div class="flex-2">
-                                <div class="input-group has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add2"
-                                        aria-describedby="inputGroupPrepend" value="임꺽정" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center ">
-                            <div class="flex-1  fw-bold">
-                                사업자등록번호
-                            </div>
-                            <div class="flex-2">
-                                <div class="input-group has-validation align-items-center ">
-                                    <input type="text" class="form-control" id="add3"
-                                        aria-describedby="inputGroupPrepend" value="784-34-56789" required>
+                    </div>
+                </div>
+                <!--Accordion-->
+                <div class="accordion my-3" id="info_accordion">
+                    <div class="accordion-item border-0 bg-primary-lightest">
+                        <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                주소 등록 방법은?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body bg-transparent">
+                                <div class="bar_list px-3 ">
+                                    <ul>
+                                        <li>임대계약건별로 임차인이 사용하는 동, 층, 호를 등록합니다.</li>
+                                        <li>
+                                            동일 건물안에 다수의 층, 호를 하나의 계약으로 임대하는 경우에는 아래와 같이 기록합니다.
+                                            <div class="ps-3">
+                                                <p>1) 지하 1층 임대하는 경우</p>
+                                                <p class="text_indent">- 층 항목에 B1으로 등록</p>
+
+                                                <p>2) 지상 1,2,3층 임대하는 경우</p>
+                                                <p class="text_indent">- 층 항목에 1-3으로 등록</p>
+
+                                                <p>3) 201호, 202호, 203호, 205호 임대하는 경우</p>
+                                                <p class="text_indent">- 호 항목에 201-203,205 </p>
+
+                                            </div>
+                                        </li>
+                                        <li>층 항목은 필수적으로 입력해야 합니다.</li>
+                                        <li>면적 등록방법
+                                            <p>면적은 공용면적을 포함해서 등록합니다. 면적은 m²로 적습니다.</p>
+                                            <p>변환 계산식<br>m²면적 = 평면적 x 3.3</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--/임차인 정보-->
-                    <hr>
+                </div>
+                <!--/Accordion-->
+            </div>
+
+            <hr>
+            <form class="needs-validation" novalidate>
+                <div class="lease_info_list_wrap mt-0">
                     <!--임대계약 소재지 s-->
                     <div class="lease_info_list gap-3 border-0">
                         <div class="subtitle2">임대계약 소재지</div>
                         <!--주소입력-->
                         <div class="d-flex flex-column gap-2">
-                            <div class="d-flex flex-column">
-                                <div class="w-100 d-none gap-2 align-items-stretch ">
-                                    <input type="text" id="sample6_postcode" placeholder="우편번호"
-                                        class="form-control w-70" required>
-                                    <input type="button" onclick="sample6_execDaumPostcode()" value="주소 검색"
-                                        class="btn  w-30 btn-primary-light">
-                                </div>
-                                <div class="w-100  ">
+                            <div class="d-flex flex-column"> 
+                                <div class="input-group w-100 mt-2">
                                     <input type="text" id="sample6_address" placeholder="주소" class="form-control text-start"
                                         required>
+			<button type="button" class="btn btn-primary">주소 검색</button>
                                 </div>
                             </div>
                             <div class="d-flex flex-column">
                                 <div class="w-100">
                                     <input type="text" id="sample6_detailAddress" placeholder="상세주소"
                                         class="form-control text-start" required>
-                                </div>
-                                <div class="w-100 mt-2 d-none">
-                                    <input type="text" id="sample6_extraAddress" placeholder="참고항목"
-                                        class="form-control">
-                                </div>
+                                </div> 
                             </div>
                         </div>
                         <!--/주소입력-->
@@ -224,7 +260,7 @@ include("include/head.php");
                                 </div>
                                 <div class="flex-2">
                                     <div class="input-group has-validation align-items-center ">
-                                        <input type="text" class="form-control  text-end" id="add2"
+                                        <input type="text" class="form-control text-end" id="add2"
                                             aria-describedby="inputGroupPrepend" value="1,000,000" required>
                                         <span>원</span>
                                     </div>
@@ -237,8 +273,8 @@ include("include/head.php");
                                 <div class="flex-2">
                                     <select class="form-select form-select-lg text-center" aria-label="Default select example">
                                         <option>선택해주세요</option>
-                                        <option value="1" selected>별도</option>
-                                        <option value="2">포함</option>
+                                        <option value="1" >포함</option>
+                                        <option value="2" selected>불포함</option>
                                     </select>
                                 </div>
                             </div>
@@ -386,8 +422,8 @@ include("include/head.php");
                                 </div>
                             </div>
                         </div> 
-                        <!--입금 계좌 e-->
-                        <hr> 
+                        <!--입금 계좌 e--> 
+                        <hr>
                         <!--공인중개사 s--> 
                         <div class="lease_info_list">
                             <div class="subtitle2">공인중개사</div>
@@ -407,79 +443,92 @@ include("include/head.php");
                     </div>
                     </div>
                     <!--임대계약 면적 e-->
-            </div> 
-        <div class="fixed_bottom full d-flex z-index-2">
-            <button type="submit" class="btn btn-lg w-100 btn-primary">
-                수정완료</button>
+                    <div class="fixed_bottom full d-flex z-index-2">
+                        <button type="button" class="btn btn-lg w-100 btn-primary"
+                            onclick="location.href='vat_list_add2-1.html'">
+                            다음</button>
+                    </div>
+            </form>
         </div>
-        </form>  
-    </div>
-    <!--content e-->
+        <!--content e-->
 
-    <!-- calendarmodal s-->
-    <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary">확인</button>
+<!--Dialogs s-->
+        <div class="modal fade" id="callout-dialogs-two" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="callout-dialogsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">안내</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3 ">
+                         계약 일자를 다시 확인해 주세요.<br>
+ 계약서상 계약기간이 실제 임대기간과 다른 경우 실제 임대기간으로 등록해 주세요
+                    </div>
+                    <div class="modal-footer">
+                        <!--button type="button" class="btn  btn-gray" onclick="location.href='vat2.html'">해당 없음</button-->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- calendarmodal e-->
+        <!--Dialogs e-->
 
-    <?
-include("include/footer.php");
-?>
 
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
-    <!-- calendarmodal s-->
-    <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary">확인</button>
+        <!--Dialogs s-->
+        <div class="modal fade" id="callout-dialogs" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="callout-dialogsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">안내</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3 ">
+                        “층” 이 등록되어 있지 않습니다.<br>
+                        주소 등록 방법을 참고하여 임대부동산의 주소를 등록해주세요.
+                    </div>
+                    <div class="modal-footer">
+                        <!--button type="button" class="btn  btn-gray" onclick="location.href='vat2.html'">해당 없음</button-->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- calendarmodal e-->
+        <!--Dialogs e-->
+
+        <script>
+            $(function () {
+                $("#callout-dialogs").modal("show");
+            });
+        </script>
+
+
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
+        <?
+        include("include/footer.php");
+        ?>
 
 </body>
 

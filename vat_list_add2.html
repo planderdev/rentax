@@ -19,7 +19,7 @@ include("include/head.php");
                         </svg>
                     </button>
                     <div data-include1="header" id="header"></div>
-                    <div class="header_title">임차인 사업자 정보</div>
+                    <div class="header_title">임차인 사업자번호 등록</div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -62,73 +62,51 @@ include("include/head.php");
                 </div>
             </div>
             <!--step e-->
-            <div>
-                <form>
-                    <div class="lease_info_list_wrap mt-0">
-                        <!--임차인 정보 s-->
-                        <div class="lease_info_list gap-3 border-0">
-                            <div class="subtitle2">임차인 정보</div>
-                            <div class="d-flex align-items-center border-list">
-                                <div class="flex-1 fw-bold">
-                                    상호
-                                </div>
-                                <div class="flex-1">
-                                     <input class="form-control" type="text" placeholder="" aria-label="사업자번호">
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-list">
-                                <div class="flex-1 fw-bold">
-                                    대표자 성명
-                                </div>
-                                <div class="flex-1">
-                                    <input class="form-control" type="text" placeholder="" aria-label="사업자번호">
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <div class="flex-1 fw-bold">
-                                    사업자 등록번호
-                                </div>
-                                <div class="flex-1">
-                                    <input class="form-control" type="number" placeholder="" aria-label="사업자번호">
-                                </div>
-                            </div>
-                            <!--div class="d-flex align-items-center">
-                                <div class="flex-1 fw-bold">
-                                    전화 번호
-                                </div>
-                                <div class="flex-1">
-                                    010-6780-5678
-                                </div>
-                            </div-->
-                        </div>
-                        <!--임차인 정보 e-->
-                        <div class="fixed_bottom full d-flex">
-                            <a href="vat_list_add2.html" class="btn btn-lg flex-1 btn-primary-light">사업자정보 다시 등록</a>
-                            <a href="vat_list_add5.html" class="btn btn-lg flex-1 btn-primary">다음</a>
-                        </div> 
-                </form>
-                <div class="px-3 pt-3">
-                    <div class="info_box_outline">
-                        <div class="d-flex gap-2 align-items-center">
-                            <span class="material-symbols-outlined">
-                                info
-                            </span>
-                            <div>
-                                임차인의 사업자정보를 확인해 주세요.
-                                임차인의 사업자정보가 틀리면 다시 등록해 주세요.
-                            </div>
-                        </div>
+            <div class="d-flex justify-content-center flex-column ">
+                <div class="px-3 py-4 text-center">
+                    <div class="subtitle3 mb-4">
+                        임차인의 사업자번호를 등록해 주세요.
                     </div>
+                    <form class="needs-validation" novalidate>
+                        <input class="form-control" type="number" placeholder="사업자번호를 등록해 주세요" aria-label="사업자번호" required>
+                        <div class="invalid-feedback d-block mt-3">
+                            사업자번호를 정확히 등록해주세요.
+                          </div>
+                    </form>
                 </div>
             </div>
-          
+            <div class="fixed_bottom full d-flex">
+                <button type="button" class="btn btn-lg flex-1 btn-primary"
+                    onclick="location.href='vat_list_add3.html'">다음</button>
+            </div>
         </div>
         <!--content e-->
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
 
   <?
     include("include/footer.php");
     ?>
-
 
 </body>
 

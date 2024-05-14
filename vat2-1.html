@@ -6,25 +6,46 @@ include("include/head.php");
     <div id="wrap">
         <!--content s-->
         <div class="container pb-0">
-<div class="join px-3  " data-aos="fade-up" data-aos-duration="1000">
-                <h2>입력된 휴대폰으로 인증요청을 보냈습니다.</h2>
- 
-                <div class="subtitle2 fw-normal mt-3 cl_description">{} 에서 [ 인증하기 ]  버튼을 눌러 인증을 진행해주세요.</div>
-            </div> 
-            <div class="d-flex flex-column justify-content-center px-3 w-100 position-absolute top-50 start-50 translate-middle">
-                <div class="rounded-2 w-100 text-center">
-                    <img src="img/kakao_logo.png" class="w-30 rounded-4">   
-                </div>
-                <div class="mt-4 subtitle2 text-center">
-                    카카오 지갑 인증 완료
-                </div>
-            </div> 
-            <div class="fixed_bottom full d-flex">
-                <a href="vat3.html" class="btn btn-lg w-100 btn-primary">인증
-                    완료</a>
+            <div class="join px-3" data-aos="fade-up" data-aos-duration="1000">
+                <h2>
+                    간편인증을 위해 최소한의 정보가 필요합니다.
+                </h2>
+                <div class="subtitle2 fw-normal mt-3 cl_description"> 아래 사항을 등록해 주세요.</div>
             </div>
-        </div> 
-        <!--content e--> 
+            <form>
+                <div class="d-flex gap-3 px-3 py-5 flex-column">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1 subtitle3">이름</div>
+                        <div class="flex-2">
+                            <input type="text" class="form-control" placeholder="홍길동" aria-label="이름"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1 subtitle3">핸드폰 번호</div>
+                        <div class="flex-2">
+                            <input type="number" class="form-control" placeholder="010-1234-5678" aria-label="핸드폰 번호"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1 subtitle3">생년월일</div>
+                        <div class="flex-2">
+                            <input type="text" class="form-control" placeholder="1999-00-00" aria-label="생년월일"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="caption2 cl_info mt-3 text-end">* 1999-09-09의 형식으로 등록해 주세요.</div>
+                </div>
+                <div class="fixed_bottom full d-flex">
+                    <a href="vat2-2.html" class="btn btn-full w-100 btn-primary">인증
+                        요청 하기</a>
+                </div>
+            </form>
+        </div>
+        <!--content e-->
+
+
         <?
     include("include/footer.php");
     ?>

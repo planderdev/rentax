@@ -19,7 +19,7 @@ include("include/head.php");
                         </svg>
                     </button>
                     <div data-include1="header" id="header"></div>
-                    <div class="header_title">임차인 사업자 정보</div>
+                    <div class="header_title">임대 계약 목록</div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -62,69 +62,73 @@ include("include/head.php");
                 </div>
             </div>
             <!--step e-->
-            <div>
-                <form>
-                    <div class="lease_info_list_wrap mt-0">
-                        <!--임차인 정보 s-->
-                        <div class="lease_info_list gap-3 border-0">
-                            <div class="subtitle2">임차인 정보</div>
-                            <div class="d-flex align-items-center border-list">
-                                <div class="flex-1 fw-bold">
-                                    상호
-                                </div>
-                                <div class="flex-1">
-                                     <input class="form-control" type="text" placeholder="" aria-label="사업자번호">
-                                </div>
+            <!--임대사업자 목록-->
+            <div class="business_manage_wrap">
+                <!---사업자-->
+                <div class="business_manage business_card">
+                    <div class="list_style_c">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub fw-bold">132-77-15487</div>
                             </div>
-                            <div class="d-flex align-items-center border-list">
-                                <div class="flex-1 fw-bold">
-                                    대표자 성명
-                                </div>
-                                <div class="flex-1">
-                                    <input class="form-control" type="text" placeholder="" aria-label="사업자번호">
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <div class="flex-1 fw-bold">
-                                    사업자 등록번호
-                                </div>
-                                <div class="flex-1">
-                                    <input class="form-control" type="number" placeholder="" aria-label="사업자번호">
-                                </div>
-                            </div>
-                            <!--div class="d-flex align-items-center">
-                                <div class="flex-1 fw-bold">
-                                    전화 번호
-                                </div>
-                                <div class="flex-1">
-                                    010-6780-5678
-                                </div>
-                            </div-->
-                        </div>
-                        <!--임차인 정보 e-->
-                        <div class="fixed_bottom full d-flex">
-                            <a href="vat_list_add2.html" class="btn btn-lg flex-1 btn-primary-light">사업자정보 다시 등록</a>
-                            <a href="vat_list_add5.html" class="btn btn-lg flex-1 btn-primary">다음</a>
-                        </div> 
-                </form>
-                <div class="px-3 pt-3">
-                    <div class="info_box_outline">
-                        <div class="d-flex gap-2 align-items-center">
-                            <span class="material-symbols-outlined">
-                                info
-                            </span>
-                            <div>
-                                임차인의 사업자정보를 확인해 주세요.
-                                임차인의 사업자정보가 틀리면 다시 등록해 주세요.
+                            <div class="list_item">
+                                <div class="title">사업자 상호</div>
+                                <div class="sub">제주 빌딩</div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!---/사업자-->
             </div>
-          
+            <!--/임대사업자 목록-->
+            <div class="px-3 py-4">
+                <div class="subtitle2 mb-2">
+                    임대계약서를 등록해 주세요.
+                </div>
+                <div class="body1 cl_description mb-3">세금신고기간안에 종료된 계약의 경우도 신고 대상이기에 종료된 계약서도 등록해주세요.</div>
+                <button type="button"
+                    class="btn btn-lg d-flex align-items-center justify-content-center w-100 btn-primary"
+                    onclick="location.href='vat_list_add2.html'">임대계약서 등록 <span class="material-symbols-outlined ms-2">
+                        add_circle
+                    </span></button>
+            </div>
+            <div class="fixed_bottom full d-flex flex-column bg-white">
+                <div class="py-3 bottom-center-checkbox">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label fs-6" for="flexCheckDefault">
+                            모든 임대 계약을 등록했습니다.
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-lg flex-1 btn-primary"
+                    onclick="location.href='building_state.html'">계약서 등록 완료</button>
+            </div>
+
         </div>
         <!--content e-->
 
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
   <?
     include("include/footer.php");
     ?>
