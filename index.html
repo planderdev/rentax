@@ -2,7 +2,14 @@
 include("include/head.php");
 ?>
 
-<body>
+<body class="scrollLock">
+    <!-- 로딩영역 s-->
+    <div class="loading">
+        <div class="loading__image">
+
+        </div>
+    </div>
+    <!-- 로딩영역 e-->
     <div id="wrap">
         <!--Header default s-->
         <header
@@ -21,7 +28,7 @@ include("include/head.php");
                             <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <div data-include1="header" id="header"></div> 
+                    <div data-include1="header" id="header"></div>
                     <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
                         data-bs-target="#alarmmodal">
                         <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
@@ -79,10 +86,10 @@ include("include/head.php");
                             </div>
                             <div class="px-3">
                                 <div class="btn_4wrap">
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 전</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 후</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">전년도</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">금년도</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">6개월 전</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">6개월 후</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">전년도</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">금년도</button>
                                 </div>
                                 <button type="button" class="btn btn-lg w-100 btn-primary">조회</button>
                             </div>
@@ -177,10 +184,10 @@ include("include/head.php");
                             </div>
                             <div class="px-3">
                                 <div class="btn_4wrap">
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 전</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 후</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">전년도</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">금년도</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">6개월 전</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">6개월 후</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">전년도</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">금년도</button>
                                 </div>
                                 <button type="button" class="btn btn-lg w-100 btn-primary">조회</button>
                             </div>
@@ -241,10 +248,10 @@ include("include/head.php");
                             </div>
                             <div class="px-3">
                                 <div class="btn_4wrap">
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 전</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">6개월 후</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">전년도</button>
-                                    <button type="button" class="btn btn-md btn-outline-primarylight">금년도</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">6개월 전</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">6개월 후</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">전년도</button>
+                                    <button type="button" class="btn btn-md btn-outline-primarylightest">금년도</button>
                                 </div>
                                 <button type="button" class="btn btn-lg w-100 btn-primary">조회</button>
                             </div>
@@ -289,7 +296,7 @@ include("include/head.php");
                 </div>
             </div>
         </div>
-        <!--content e--> 
+        <!--content e-->
         <!-- calendarmodal s-->
         <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
             aria-hidden="true">
@@ -309,10 +316,47 @@ include("include/head.php");
                 </div>
             </div>
         </div>
-        <!-- calendarmodal e-->
- 
-<!--Toast s-->
-<div class="toast toast-bottom toast_animation show align-items-center bg-danger border-0" role="alert"
+        <!-- calendarmodal e--> 
+
+        <!--bottom modal s-->
+        <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="알림팝업" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-bottom">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">세무 일정 알림</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="px-3">
+                            <span class="material-symbols-outlined">brightness_alert</span>
+                            <p><strong>부가가치세신고 기간입니다.</strong></p>
+                            <p>부가가치세 신고를 하시겠습니까?</p>
+                        </div>
+                        <div class="w-50 my-3 mx-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    더 이상 보지않습니다.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-tranparent cl_info" data-bs-dismiss="modal">신고안함</button>
+                        <button type="button" class="btn btn-lg btn-primary"
+                            onclick="location.href='vat.html'">부가가치세 신고</button>
+                    </div>
+                    <!--div class="modal-footer">
+        <button type="button" class="btn btn-tranparent cl_info" id="modal-today-close">오늘 하루 보지 않기</button>
+          <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">확인</button>
+         </div-->
+                </div>
+            </div>
+        </div>
+        <!--bottom modal e--> 
+
+        <!--Toast s-->
+        <div class="toast toast-bottom toast_animation show align-items-center bg-danger border-0" role="alert"
             aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body">

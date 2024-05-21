@@ -1,0 +1,335 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">매출 종이세금계산서</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container bg-light-gray">
+            <section class="bg-white pb-1">
+                <!--step s-->
+                <div class="stepper_wrapper">
+                    <div class="stepper_item active">
+                        <div class="step_counter">1</div>
+                        <!--div class="step_name">임대 계약</div-->
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter">2</div>
+                        <div class="step_name">매출 정보</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">3</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">4</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">5</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">6</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter">7</div>
+                    </div>
+                </div>
+                <!--step e-->
+                <div class="px-3 "> 
+                    <!--Accordion-->
+                    <div class="accordion mt-3 d-none" id="info_accordion">
+                        <div class="accordion-item border-0 bg-primary-lightest">
+                            <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                    임차인 사업자 정보
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body bg-transparent">
+                                    <div class="list_style_c py-3">
+                                        <div class="list_item_wrap sm">
+                                            <div class="list_item">
+                                                <div class="title">사업자 번호</div>
+                                                <div class="sub text-end">112-82-12345</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">대표자 성명</div>
+                                                <div class="sub text-end">이몽룡</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">교육업 / 학원업</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">사업장 주소</div>
+                                                <div class="sub text-end">제주도 제주시 노형동 112번지</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Accordion-->
+                    <!--Accordion-->
+                    <div class="accordion my-3" id="info_accordion_a">
+                        <div class="accordion-item border-0 bg-primary-lightest">
+                            <h2 class="accordion-header " id="panelsStayOpen-headingtwo">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapsetwo">
+                                    임대 계약 정보
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapsetwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingtwo">
+                                <div class="accordion-body bg-transparent">
+                                    <div class="list_style_c py-3">
+                                        <div class="list_item_wrap sm">
+                                            <div class="list_item">
+                                                <div class="title">사업자번호</div>
+                                                <div class="sub text-end">112-82-12345</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">임차인 상호</div>
+                                                <div class="sub text-end">정석학원</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">대표자 성명</div>
+                                                <div class="sub text-end">이몽룡</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">계약 시작일</div>
+                                                <div class="sub text-end">2024년 4월15일</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">계약 종료일</div>
+                                                <div class="sub text-end">2025년 4월15일</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">월 임대료</div>
+                                                <div class="sub text-end"><span>1,500,000</span>원</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">부가가치세</div>
+                                                <div class="sub text-end">불포함</div>
+                                            </div>
+                                            <div class="list_item">
+                                                <div class="title">선불/후불</div>
+                                                <div class="sub text-end">후불</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Accordion-->
+                </div>
+            </section>
+            <div class="sale_info_wrap">
+                <!---임대정보-->
+                <div class="sale_manage border-gray d-none">
+                    <div class="list_style_c gap-3">
+                        <div class="list_item_title">연동 123-45 / 2층 201-203,205호</div>
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">임차인 상호</div>
+                                <div class="sub text-end">정석 학원</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---/임대정보-->
+                <!--전자세금계산서-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sale_info_a">
+                            <div class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#sale_content_a"
+                                aria-expanded="true" aria-controls="sale_content_a">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start">
+                                        전자세금계산서
+                                    </div>
+                                    <div class="center">
+                                        <span>1</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_a" class="accordion-collapse collapse show" aria-labelledby="sale_info_a"
+                            data-bs-parent="#sale_info_acc">
+                            <div class="accordion-body ">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 5 / 15
+                                    </div>
+                                    <div class="flex-3 text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/전자세금계산서-->
+                <!--임대료-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sale_info_b">
+                            <div class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#sale_content_b" aria-expanded="false" aria-controls="sale_content_b">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start"> 
+                                        임대료
+                                    </div>
+                                    <div class="center">
+                                        <span>0</span>개월
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
+                                    </div> 
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_b" class="accordion-collapse collapse" aria-labelledby="sale_info_b"
+                            data-bs-parent="#sale_info_acc2">
+                            <div class="accordion-body ">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 5 / 15
+                                    </div>
+                                    <div class="flex-3 text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/임대료-->
+                <!--종이세금계산서-->
+                <div class="accordion accordion-flush border-accordion" id="sale_info_acc3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sale_info_c">
+                            <div class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#sale_content_c"
+                                aria-expanded="true" aria-controls="sale_content_c">
+                                <div class="d-flex justify-content-between align-items-center w-85">
+                                    <div class="start"> 
+                                        종이세금계산서
+                                    </div>
+                                    <div class="center">
+                                        <span>0</span>장
+                                    </div>
+                                    <div class="end text-end">
+                                        <span>0</span>원
+                                    </div>  
+                                </div>
+                            </div>
+                        </h2>
+                        <div id="sale_content_c" class="accordion-collapse collapse show" aria-labelledby="sale_info_c"
+                            data-bs-parent="#sale_info_acc3">
+                            <div class="accordion-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="flex-1">
+                                        24 / 6 / 15
+                                    </div>
+                                    <div class="flex-2 text-end">
+                                        <span>1,500,000</span>원
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="sale_info_submit_edit.html"
+                                            class="btn btn-sm btn-outline-lightgray w-70 ms-3">수정</a>
+                                    </div>
+                                </div>
+                                <a href="sale_info_submit.html" class="btn btn-md btn-dark mt-3">종이세금계산서 추가 <span
+                                        class="material-symbols-outlined ms-2">
+                                        add_circle
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/종이세금계산서-->
+                <div class="info_box_outline mb-3">
+                    <ul>
+                        <li>[종이세금계산서 추가]를 누르면 종이세금계산서가 추가 등록됩니다.</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="fixed_bottom full d-flex">
+                <button type="button" class="btn btn-lg flex-1 btn-primary"
+                    onclick="location.href='sale_info_detail.html'">다음</button>
+            </div>
+        </div>
+        <!--content e-->
+
+        <!--Dialogs s-->
+        <div class="modal fade" id="callout-dialogs" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="callout-dialogsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">안내</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3 ">
+                        <p class="mb-2">세금계산서의 내용을 다시 확인해 주세요.</p>
+                        <p>작성일이 6월 30일(12월31일)이전이여야 합니다.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <!--button type="button" class="btn  btn-gray" onclick="location.href='vat2.html'">해당 없음</button-->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Dialogs e-->
+
+        <script>
+            $(function () {
+                $("#callout-dialogs").modal("show");
+            });
+        </script>
+
+
+</body>
+
+</html>

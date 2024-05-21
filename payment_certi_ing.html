@@ -1,0 +1,34 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--content s-->
+        <div class="container pb-0">
+           
+            <div class="d-flex justify-content-center flex-column px-3 vh-100">
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="loader"></span> 
+                </div>
+                <div class="mt-4 text-center">
+                    <div class="subtitle2">
+                        부가가치세 신고서를 국세청에 접수하고 있습니다.
+                    </div> 
+                </div>
+            </div>    
+        </div>
+        <!--content e-->
+        <script>
+            setTimeout('gotoPage()', 3000); // 3초 후 실행             
+            function gotoPage(){            
+                location.href="tax_report_success.html";  // 이동주소            
+            }            
+            </script>
+        <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+</html>
