@@ -1,0 +1,118 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">부가가치세 신고 안내</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <div class="d-flex flex-column px-3 vh-100"> 
+                <form>
+                    <div class="border rounded-2 px-3 mt-4 mb-3">
+                        <div class="mt-4">
+                            <div class="mt-4 subtitle1">
+                                부가가치세 신고와 관련하여 아래 사항을 확인해주세요.
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column">
+                            <div class="d-flex mb-3">
+                                <div class="flex-3"></div>
+                                <div class="flex-1 d-flex justify-content-end gap-2 mt-4">
+                                    <span class="fw-bold cl_info">예</span>
+                                    <span class="fw-bold cl_info">아니오</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-3 body1">고용된 직원이 있습니까?</div>
+                                <div class="d-flex justify-content-end gap-4 flex-1">
+                                    <input class="form-check-input" type="radio" name="report" id="inlineRadio1"
+                                        value="yes">
+                                    <input class="form-check-input" type="radio" name="report" id="inlineRadio2"
+                                        value="no">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-3 body1">임대사업 부동산이 공동명의 입니까?<br>(부부공동명의 포함)</div>
+                                <div class="d-flex justify-content-end gap-4 flex-1">
+                                    <input class="form-check-input" type="radio" name="report2" id="inlineRadio3"
+                                        value="yes">
+                                    <input class="form-check-input" type="radio" name="report2" id="inlineRadio4"
+                                        value="no">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-3 body1">임대하는 건물이 주택과 상가가 함께 있고, 하나의 사업자등록증으로 관리하세요?</div>
+                                <div class="d-flex justify-content-end gap-4 flex-1">
+                                    <input class="form-check-input" type="radio" name="report3" id="inlineRadio5"
+                                        value="yes">
+                                    <input class="form-check-input" type="radio" name="report3" id="inlineRadio6"
+                                        value="no">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-3 body1">
+                                    업무용 차량이 있습니까? </div>
+                                <div class="d-flex justify-content-end gap-4 flex-1">
+                                    <input class="form-check-input" type="radio" name="report4" id="inlineRadio7"
+                                        value="yes">
+                                    <input class="form-check-input" type="radio" name="report4" id="inlineRadio7"
+                                        value="no">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+ 
+
+                <div class="fixed_bottom full d-flex">
+                    <button type="button" class="btn btn-lg flex-1 btn-primary"
+                        onclick="location.href='vat_list_add2-1.html'">다음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content e-->
+
+
+
+    <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+
+</html>

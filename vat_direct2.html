@@ -1,0 +1,278 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대계약 정보</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <!--step s-->
+            <div class="stepper_wrapper">
+                <div class="stepper_item active">
+                    <div class="step_counter">1</div>
+                    <div class="step_name">임대계약</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">2</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">3</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">4</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">5</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">6</div>
+                </div>
+                <div class="stepper_item">
+                    <div class="step_counter">7</div>
+                </div>
+            </div>
+            <!--step e-->
+            <form class="needs-validation" novalidate>
+                <div class="lease_info_list_wrap mt-0">
+                    <!--임대계약 조건 s-->
+                    <div class="lease_info_list gap-3 border-0">
+                        <div class="subtitle2">임대계약 조건</div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                보증금
+                            </div>
+                            <div class="flex-2">
+                                <div class="input-group has-validation align-items-center ">
+                                    <input type="text" class="form-control text-end" id="add1"
+                                        aria-describedby="inputGroupPrepend" value="10,000,000" required>
+                                    <span>원</span>
+                                    <div class="invalid-tooltip">
+                                        필수 입력 항목입니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                월 임대료
+                            </div>
+                            <div class="flex-2">
+                                <div class="input-group has-validation align-items-center ">
+                                    <input type="text" class="form-control text-end" id="add2"
+                                        aria-describedby="inputGroupPrepend" value="1,000,000" required>
+                                    <span>원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                부가가치세
+                            </div>
+                            <div class="flex-2">
+                                <select class="form-select form-select-lg" aria-label="Default select example">
+                                    <option>선택해주세요</option>
+                                    <option value="1" selected>별도</option>
+                                    <option value="2">포함</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                부가가치세액
+                            </div>
+                            <div class="flex-2 text-end">
+                                <span class="cl_dark fw-bold">100,000</span>
+                                <span>원</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                합계 금액
+                            </div>
+                            <div class="flex-2 text-end">
+                                <span class="cl_dark fw-bold">1,100,000</span>
+                                <span>원</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                임대료 납입일
+                            </div>
+                            <div class="flex-2">
+                                <select class="form-select form-select-lg" aria-label="Default select example">
+                                    <option>선택해주세요</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31" selected>31</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-1  fw-bold">
+                                선불 / 후불
+                            </div>
+                            <div class="flex-2">
+                                <select class="form-select form-select-lg" aria-label="Default select example">
+                                    <option>선택해주세요</option>
+                                    <option value="1">선불</option>
+                                    <option value="2" selected>후불</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--임대계약 조건 e-->
+                    <hr>
+                    <!--계약 일자 s-->
+                    <div class="lease_info_list gap-3 border-0">
+                        <div class="subtitle2">계약 일자</div>
+                        <div class="d-flex align-items-center border-list">
+                            <div class="flex-1  fw-bold">
+                                계약 시작일
+                            </div>
+                            <div class="flex-2 text-end">
+                                <input type="text" class="form-control" value="2023년 04월 15일" data-bs-toggle="modal"
+                                    data-bs-target="#calendarmodal" readonly>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <div class="flex-1  fw-bold">
+                                계약 종료일
+                            </div>
+                            <div class="flex-2 text-end">
+                                <input type="text" class="form-control" value="2024년 04월 15일" data-bs-toggle="modal"
+                                    data-bs-target="#calendarmodal" readonly>
+                            </div>
+                        </div>
+
+                        <div class="info_box_outline">
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="material-symbols-outlined">
+                                    info
+                                </span>
+                                <div>
+                                    실제 임대기간을 등록해주세요.
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--계약 일자 e-->
+                    <div class="fixed_bottom full d-flex z-index-2">
+                        <button type="button" class="btn btn-lg w-100 btn-primary"
+                            onclick="location.href='vat_list_add2-1.html'">
+                            다음</button>
+                    </div>
+             </form> 
+
+        </div>
+        <!--content e--> 
+ 
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
+
+
+        <!-- calendarmodal s-->
+        <div class="modal fade" id="calendarmodal" tabindex="-1" aria-labelledby="calendarmodalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="calendarmodalLabel">날짜 선택</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calendarmodal e-->
+
+  <?
+    include("include/footer.php");
+    ?>
+
+</body>
+
+</html>

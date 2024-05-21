@@ -1,0 +1,298 @@
+<?
+include("include/head.php");
+?>
+
+<body>
+    <div id="wrap">
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header sticky-top  flex-wrap align-items-center justify-content-between py-3">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler default-stroke" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 20H20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div data-include1="header" id="header"></div>
+                    <div class="header_title">임대사업자 목록</div>
+                    <button type="button" class="btn navbar-toggler default-fill" data-bs-toggle="modal"
+                        data-bs-target="#alarmmodal">
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger  rounded-circle">
+                            <span class="visually-hidden">새로운 알림</span>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                            <path
+                                d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container bg-light-gray">
+            <!--임대사업자 목록-->
+            <div class="business_manage_wrap">
+                <!---사업자-->
+                <div class="business_manage">
+                    <div class="list_style_c mb-3">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub fw-bold">132-35-28416</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">상호</div>
+                                <div class="sub">김상가</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-icon-right w-100 btn-md"
+                        onclick="location.href='vat_submit.html'">부가가치세 신고하기<span
+                            class="material-symbols-outlined ms-2">add</span></button>
+                </div>
+<!---사업자-->
+                <div class="business_manage">
+                    <div class="list_style_c mb-3">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub fw-bold">132-35-28416</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">상호</div>
+                                <div class="sub">김상가</div>
+                            </div>
+<div class="info_box_outline">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined">
+                                        info
+                                    </span>
+                                    <span>
+                                        렌택스로 신고 할 수 있습니다.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-icon-right w-100 btn-md"
+                        onclick="location.href='vat_submit.html'">부가가치세 신고하기<span
+                            class="material-symbols-outlined ms-2">add</span></button>
+                </div>
+                <!---사업자-->
+                <div class="business_manage">
+                    <div class="list_style_c mb-3">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub fw-bold">192-45-34512</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">상호</div>
+                                <div class="sub">제주 상가주택</div>
+                            </div>
+                            <div class="info_box_outline warning">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined">
+                                        info
+                                    </span>
+                                    <span>
+                                        렌택스로 신고 할 수 없는 경우입니다.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Accordion-->
+                    <div class="accordion my-3" id="info_accordion">
+                        <div class="accordion-item border-0 bg-danger-light">
+                            <h2 class="accordion-header " id="panelsStayOpen-headingOne">
+                                <button class="accordion-button collapsed bg-transparent list-accordion" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                    사업자 조건 변경하기
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body bg-transparent">
+                                    <div class="px-3 pb-3 ">
+                                        <p class="mb-2">선택하신 사업자는 렌택스로 부가가치세
+                                            신고를 하기에 어려운 조건을 가지고 있습니다.</p> 
+                                        <p class="mb-2">공동명의인 경우 등 세법상 복잡한 경우에는
+                                            렌택스로 신고 하실 수 없습니다.</p>  
+                                        <p class="mb-2">이런 경우는 세무사에게 의뢰하셔서
+                                            부가가치세를 신고해야 합니다.</p> 
+                                        <p class="mb-2">사업자 조건을 확인하고 변경 하시겠습니까?</p>
+
+                                        <button type="button" class="btn btn-dark btn-icon-right w-100 btn-md"
+                                            data-bs-toggle="modal" data-bs-target="#info_modal">변경하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Accordion-->
+
+                </div>
+               
+<!---사업자-->
+                <div class="business_manage">
+                    <div class="list_style_c mb-3">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub fw-bold">192-45-34512</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">상호</div>
+                                <div class="sub">제주 상가주택</div>
+                            </div>
+                            <div class="info_box_outline success">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined">
+                                        info
+                                    </span>
+                                    <span>
+                                        부가가치세 신고가 완료되었습니다.<br>기한 내에 납부해주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success btn-icon-right w-100 btn-md"
+                        onclick="location.href='check_num.html'">부가가치세 신고 다시 하기<span
+                            class="material-symbols-outlined ms-2">search</span></button>
+                </div>
+ <!---사업자-->
+                <div class="business_manage">
+                    <div class="list_style_c mb-3">
+                        <div class="list_item_wrap">
+                            <div class="list_item">
+                                <div class="title">사업자 등록번호</div>
+                                <div class="sub fw-bold">192-45-34512</div>
+                            </div>
+                            <div class="list_item">
+                                <div class="title">상호</div>
+                                <div class="sub">제주 상가주택</div>
+                            </div>
+                            <div class="info_box_outline success">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined">
+                                        info
+                                    </span>
+                                    <span>
+                                        부가가치세 신고가 완료되었습니다.<br>기한 내에 납부해주세요.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success btn-icon-right w-100 btn-md"
+                        onclick="location.href='check_num.html'">전자납부번호 확인하기<span
+                            class="material-symbols-outlined ms-2">search</span></button>
+                </div>
+                <!--/임대사업자 목록-->
+            </div>
+            <div class="px-3 py-4"> 
+                <!--Accordion-->
+                <div class="accordion my-4 " id="info_accordion">
+                    <div class="accordion-item border-0 bg-white">
+                        <h2 class="accordion-header " id="infotxt-headingOne">
+                            <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#infotxt-collapseOne" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                부동산 임대업의 부가가치세는?
+                            </button>
+                        </h2>
+                        <div id="infotxt-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="infotxt-headingOne">
+                            <div class="accordion-body bg-transparent">
+                                <div class="num_list px-3 pb-3">
+                                    <ul>
+                                        <li>
+                                            <strong>일반 과세자</strong>
+                                            <p>매년 1월, 7월 (년2회)</p>
+                                        </li>
+                                        <li>
+                                            <strong>간이 과세자</strong>
+                                            <p>매년 1월 (년1회)</p>
+                                            <p>년간 임대수입이 4,800만원 미만인 사업자이며, 부가가치세 납부 의무는 없지만 신고의무는 있습니다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Accordion-->
+                <div class="subtitle3">
+                    부가가치세 신고를 위해서 임대계약서와 종이세금계산서를 준비해주세요.
+                </div>
+            </div>
+        </div>
+        <!--content e-->
+
+
+        <!-- info_modal s-->
+        <div class="modal fade" id="info_modal" tabindex="-1" aria-labelledby="info_modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="info_modalLabel">안내</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3">
+                        세금 신고를 다시 하시겠습니까?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- info_modal e-->
+
+
+        <!--Dialogs s-->
+        <div class="modal fade" id="callout-dialogs" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="callout-dialogsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">안내</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-3 ">
+                        <p class="mb-3">세금신고를 중단하고 임대관리로 이동합니다.</p> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn  btn-primary"  data-bs-dismiss="modal">확인</button>
+                        <!--button type="button" class="btn btn-primary" onclick="location.href='vat2.html'">다시 수집</button-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Dialogs e-->
+
+        <script>
+            $(function () {
+                $("#callout-dialogs").modal("show");
+            });
+        </script>
+
+<?
+        include("include/footer.php");
+        ?>
+
+
+
+</body>
+
+</html>
